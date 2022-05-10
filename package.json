@@ -1,0 +1,24 @@
+{
+  "name": "p7",
+  "version": "1.0.0",
+  "description": "Les Petits plats",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./Sass/main.scss:./Css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oleeefr/P11-front-end-search-engine.git"
+  },
+  "keywords": [
+    "Recettes",
+    "Ingrédients",
+    "Ustensibles"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oleeefr/P11-front-end-search-engine/issues"
+  },
+  "homepage": "https://github.com/oleeefr/P11-front-end-search-engine#readme"
+}
