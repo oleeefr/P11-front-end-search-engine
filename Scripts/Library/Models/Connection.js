@@ -1,7 +1,6 @@
 export class Connection {
   
     constructor(route) {
-      //this.recettes = route
         
          this.recettes = fetch (route)
             .then (
