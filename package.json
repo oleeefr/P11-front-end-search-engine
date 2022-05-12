@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/oleeefr/P11-front-end-search-engine/issues"
   },
-  "homepage": "https://github.com/oleeefr/P11-front-end-search-engine#readme"
+  "homepage": "https://github.com/oleeefr/P11-front-end-search-engine#readme",
+  "dependencies": {
+    "bootstrap": "^4.6.1"
+  }
 }
