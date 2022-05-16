@@ -4,7 +4,15 @@ let ___PATH = '../../lib/render/';
 export async function index () {
 
     let render = await import ('../controller/index.js');
+    let util = import ('../../Utils/utils.js');
 
+    let fieldSearch = document.querySelector('#search-field');
+    let saisieSearch = fieldSearch.addEventListener("change", 
+       function () {
+        // let inputfield = util.getFormatLowerCaseAndLmString(fieldSearch.value);
+            console.log("mot recherché :"+fieldSearch.value);
+       }
+    );
     render.recettesDisplay();
  }
 

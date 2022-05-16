@@ -6,7 +6,7 @@ export class Article_Recette {
         this.titre = titre;
         this.description = description;
         this.time = time;
-        this.ingredientsHtml = this.getIngredients(ingredients);
+        this.ingredientsHtml = this.getIngredientsDom(ingredients);
     }
 
     render () {
@@ -32,7 +32,7 @@ export class Article_Recette {
         return div;
     }
 
-    getIngredients (ingredients) {
+    getIngredientsDom (ingredients) {
 
         let renderIngredients ="";
         ingredients.forEach(ingredient => {
