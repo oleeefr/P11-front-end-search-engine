@@ -9957,6 +9957,16 @@ header img {
   border: none;
 }
 
+.btn-group {
+  position: relative;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: middle;
+}
+.btn-group .dropdown-parent {
+  position: relative;
+}
+
 .card-deck {
   margin: 0 !important;
   position: absolute;
