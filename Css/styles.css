@@ -9943,5 +9943,56 @@ h3 {
     border-color: #dee2e6;
   }
 }
+/* Landing Page */
+.hidden {
+  display: none;
+}
+
+header img {
+  width: 300px;
+}
+
+#search-field {
+  background-color: #e7e7e7;
+  border: none;
+}
+
+.card-deck {
+  margin: 0 !important;
+  position: absolute;
+  top: 25rem;
+  /* Mise en forme de la liste des recettes */
+}
+.card-deck #card-list .recipe-card {
+  background-color: #f8f9fb;
+  border-radius: 10px;
+  min-width: 30%;
+  max-width: 30%;
+  cursor: pointer;
+}
+.card-deck #card-list .recipe-card .card-img-placeholder {
+  background-color: #c9bdbd;
+  min-height: 200px;
+  border-radius: 10px 10px 0 0;
+}
+.card-deck #card-list .recipe-card .card-content-title {
+  font-size: 1.5rem;
+}
+.card-deck #card-list .recipe-card .ingredient-container {
+  overflow: hidden;
+}
+.card-deck #card-list .recipe-card .description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  text-align: justify;
+  padding-right: 1em;
+  margin: 0 -1em -2rem 0.5rem;
+}
+.card-deck #card-list .recipe-card .time {
+  font-size: 1.5rem;
+}
 
 /*# sourceMappingURL=styles.css.map */

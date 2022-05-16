@@ -10,19 +10,140 @@
     <title>Les Petits Plats - plateforme de Recettes</title>
   </head>
   <body>
-    <div class="container">
-      <header>
-        <img src="./Assets/Logo/LesPettitsPlats.png" alt="logo"/>
-      </header>
-      <main>
-        <h1> Test les pletits plats</h1>
-        <nav aria-label="recherche" role="dialog">
-          <form name="recherche"><input type="text" name="saisie" /></form>   
-        
-          <div id="tags"></div>
-          <section></section>
+    <main class="container-fluid">
+      <!-- header Logo -->
+      <div class="row">
+          <header class="col navbar navbar-expand">
+            <a href="index.html" class="navbar-brand mx-auto d-block mt-4"><img src="./Assets/Logo/LesPetitsPlats.png" alt="logo le spetits plats"/></a>
+          </header>
+      </div>
+      <!-- champs de Recherche -->
+      <div class="row">
+        <div class="col input-group input-group-lg mx-5 mb-4" id="autocomplete">
+          <input class="form-control" id="search-field" type="text" name="search-field" placeholder="Rechercher un ingrédient, appareil, ustensiles ou une recette">
+          <div class="input-group-append">
+            <span id="launch-search" class="input-group-text">
+              <i class="fas fa-search" aria-hidden="true"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+      <!-- mots clé des tags mise en Recherche -->
+      <div id="tags-selectionnes" class="mx-5"></div>
+      <!-- Champs des tags à Rechercher -->
+
+      <!-- Affichage des cards de Recettes -->
+      <div class="card-deck pl-4">
+  			<div id="card-list" class="d-flex flex-wrap" >
+          <!-- card article recettes -->
+          <article class="card recipe-card pb-3 mb-5">
+            <div class="card-img-placeholder"></div>
+            <div class="d-flex justify-content-between mt-3 px-3">
+              <!-- dynamique: titre de la recette -->
+              <h2 class="card-content-title w-50">Limonade de Coco</h2>
+              <div class="d-flex font-weight-bold">
+                <span class="far fa-clock fa-2x mt-2" aria-hidden="true"></span>
+                <p class="ml-2 time">10 min</p></div>
+              </div>
+              <div class="card-body d-flex justify-content-between card-content">
+                <div class="ingredient-container">
+                  <!-- dynamique: ingrédient -- quantity -->
+                  <p class="mb-0"><span class="font-weight-bold ingredient">Lait de coco</span>: 400ml</p>
+                  <p class="mb-0"><span class="font-weight-bold ingredient">Jus de citron</span>: 2</p>
+                  <p class="mb-0"><span class="font-weight-bold ingredient">Crème de coco</span>: 2cuillères à soupe</p>
+                  <p class="mb-0"><span class="font-weight-bold ingredient">Glaçons</span></p>
+                </div>
+                <!-- dnynamique: description de la recette-->
+                <p class="description w-50">Mettre les glaçons à votre goût dans le blender, ajouter le lait, la crème de coco, le jus de 2 citrons et le sucre. Mixer jusqu'à avoir la consistence désirée</p>
+              </div>
+            </article>
+          <!-- card article recettes test de l'ergonomie Bootstrap des cartes -->
+          <article class="card recipe-card pb-3 mb-5">
+          <div class="card-img-placeholder"></div>
+          <div class="d-flex justify-content-between mt-3 px-3">
+            <h2 class="card-content-title w-50">Limonade de Coco</h2>
+            <div class="d-flex font-weight-bold">
+              <span class="far fa-clock fa-2x mt-2" aria-hidden="true"></span>
+              <p class="ml-2 time">10 min</p></div>
+            </div>
+            <div class="card-body d-flex justify-content-between card-content">
+              <div class="ingredient-container">
+                <p class="mb-0"><span class="font-weight-bold ingredient">Lait de coco</span>: 400ml</p>
+                <p class="mb-0"><span class="font-weight-bold ingredient">Jus de citron</span>: 2</p>
+                <p class="mb-0"><span class="font-weight-bold ingredient">Crème de coco</span>: 2cuillères à soupe</p>
+                <p class="mb-0"><span class="font-weight-bold ingredient">Glaçons</span></p>
+              </div>
+              <p class="description w-50">Mettre les glaçons à votre goût dans le blender, ajouter le lait, la crème de coco, le jus de 2 citrons et le sucre. Mixer jusqu'à avoir la consistence désirée</p>
+            </div>
+          </article>
+          <article class="card recipe-card pb-3 mb-5">
+            <div class="card-img-placeholder"></div>
+            <div class="d-flex justify-content-between mt-3 px-3">
+              <h2 class="card-content-title w-50">Limonade de Coco</h2>
+              <div class="d-flex font-weight-bold">
+                <span class="far fa-clock fa-2x mt-2" aria-hidden="true"></span>
+                <p class="ml-2 time">10 min</p></div>
+              </div>
+              <div class="card-body d-flex justify-content-between card-content">
+                <div class="ingredient-container">
+                  <p class="mb-0"><span class="font-weight-bold ingredient">Lait de coco</span>: 400ml</p>
+                  <p class="mb-0"><span class="font-weight-bold ingredient">Jus de citron</span>: 2</p>
+                  <p class="mb-0"><span class="font-weight-bold ingredient">Crème de coco</span>: 2cuillères à soupe</p>
+                  <p class="mb-0"><span class="font-weight-bold ingredient">Glaçons</span></p>
+                </div>
+                <p class="description w-50">Mettre les glaçons à votre goût dans le blender, ajouter le lait, la crème de coco, le jus de 2 citrons et le sucre. Mixer jusqu'à avoir la consistence désirée</p>
+              </div>
+          </article>
+          <article class="card recipe-card pb-3 mb-5">
+          <div class="card-img-placeholder"></div>
+          <div class="d-flex justify-content-between mt-3 px-3">
+            <h2 class="card-content-title w-50">Limonade de Coco</h2>
+            <div class="d-flex font-weight-bold">
+              <span class="far fa-clock fa-2x mt-2" aria-hidden="true"></span>
+              <p class="ml-2 time">10 min</p></div>
+            </div>
+            <div class="card-body d-flex justify-content-between card-content">
+              <div class="ingredient-container">
+                <p class="mb-0"><span class="font-weight-bold ingredient">Lait de coco</span>: 400ml</p>
+                <p class="mb-0"><span class="font-weight-bold ingredient">Jus de citron</span>: 2</p>
+                <p class="mb-0"><span class="font-weight-bold ingredient">Crème de coco</span>: 2cuillères à soupe</p>
+                <p class="mb-0"><span class="font-weight-bold ingredient">Glaçons</span></p>
+              </div>
+              <p class="description w-50">Mettre les glaçons à votre goût dans le blender, ajouter le lait, la crème de coco, le jus de 2 citrons et le sucre. Mixer jusqu'à avoir la consistence désirée</p>
+            </div>
+          </article>
+        </div>
+      </div>
+      <!-- 
+        <nav aria-label="recherche">
+            <form name="recherche"><input type="text" name="saisie" />
+              <div id="icon-tags"></div>
+              <div id="recherche-tags">
+                <input list="ingrédients" id="Ingrédients"/>
+                <datalist id="ingrédients">
+                  <option value="coco">
+                  <option value="beurre">
+                  <option value="farine">
+                  <option value="banane">
+                  <option value="fruit">
+                </datalist>
+                <input list="apareils" id="Apareils"/>
+                <input list="ustensibles" id="Ustensibles"/>
+              </div>
+            </form>   
         </nav>
-      </main>
-    </div>
-    <script type="module" src="Scripts/Main/main.js"></script>
+        <section id="Liste-recettes">
+          <h2 class="hidden">Liste-recettes</h2>
+          <article>
+            <img src="/" alt="image de la recette"/>
+            <h2>Titre de la recette</h2>
+            <dl>
+              <dt class="hidden">title recette</dt>
+              <dd>test image</dd>
+            </dl>
+          </article>
+        </section>-->
+
+    </main>
+  <script type="module" src="Scripts/Main/main.js"></script>
   </body>
