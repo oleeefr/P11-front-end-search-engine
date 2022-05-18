@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-18T13:01:14.012Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36" etag="wD9XdmK-AF5hCOWIKd2F" version="18.0.7" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-18T13:03:15.806Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36" etag="rpuZICqDgO0xlH7cyWR0" version="18.0.7" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="830" dy="463" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -67,7 +67,7 @@
           <mxGeometry x="580" y="370" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="HcrZf0lqop2rZ3PRoa04-15" value="Filtrage de la liste de Recette à partir des Tags (Ingrédients, Appareils, Ustensibles)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="155" y="650" width="150" height="70" as="geometry" />
+          <mxGeometry x="155" y="670" width="150" height="70" as="geometry" />
         </mxCell>
         <mxCell id="HcrZf0lqop2rZ3PRoa04-18" value="Génération de toute la liste de Recette&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="390" y="370" width="120" height="60" as="geometry" />
@@ -108,12 +108,12 @@
             <mxPoint x="-21" y="-18" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HcrZf0lqop2rZ3PRoa04-31" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="HcrZf0lqop2rZ3PRoa04-15">
+        <mxCell id="HcrZf0lqop2rZ3PRoa04-31" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="HcrZf0lqop2rZ3PRoa04-15" target="HcrZf0lqop2rZ3PRoa04-46">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="200" y="820" as="sourcePoint" />
             <mxPoint x="450" y="740" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="230" y="740" />
+              <mxPoint x="230" y="800" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -137,12 +137,12 @@
         <mxCell id="HcrZf0lqop2rZ3PRoa04-40" value="Affichage d&#39;un message &quot;Aucune recette ne correspond à votre critère...&quot;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="550" y="1060" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="HcrZf0lqop2rZ3PRoa04-41" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="HcrZf0lqop2rZ3PRoa04-14">
+        <mxCell id="HcrZf0lqop2rZ3PRoa04-41" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="HcrZf0lqop2rZ3PRoa04-14" target="HcrZf0lqop2rZ3PRoa04-25">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="380" y="580" as="sourcePoint" />
             <mxPoint x="450" y="520" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="640" y="520" />
+              <mxPoint x="640" y="625" />
             </Array>
           </mxGeometry>
         </mxCell>
