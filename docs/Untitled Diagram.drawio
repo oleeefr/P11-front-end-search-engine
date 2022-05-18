@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-18T13:09:16.204Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36" etag="kf_PFW727q_z-4ur1dOq" version="18.0.7" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-18T14:08:41.425Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36" etag="tj-bk_4Ejgxb4y997X4x" version="18.0.7" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="989" dy="551" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -25,7 +25,7 @@
         <mxCell id="HcrZf0lqop2rZ3PRoa04-3" value="Affichage de la Liste des recettes" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="HcrZf0lqop2rZ3PRoa04-4">
           <mxGeometry width="115" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="HcrZf0lqop2rZ3PRoa04-0" value="3 caractères minimums sont&amp;nbsp; saisies dans La barre de Recherche Principale" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="HcrZf0lqop2rZ3PRoa04-0" value="3 caractères minimums sont&amp;nbsp; saisis dans La barre de Recherche Principale" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="380" y="131.25" width="140" height="137.5" as="geometry" />
         </mxCell>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-4" value="Yes" style="rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="WIyWlLk6GJQsqaUBKTNV-6" target="HcrZf0lqop2rZ3PRoa04-18" edge="1">
@@ -63,7 +63,7 @@
             <mxPoint x="-95" y="-21" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HcrZf0lqop2rZ3PRoa04-14" value="Génération de la liste de Recette à partir des Caractères saisies" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="HcrZf0lqop2rZ3PRoa04-14" value="Génération de la liste de Recette à partir des Caractères saisis" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="580" y="370" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="HcrZf0lqop2rZ3PRoa04-15" value="Filtrage de la liste de Recette à partir des Tags (Ingrédients, Appareils, Ustensibles)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
