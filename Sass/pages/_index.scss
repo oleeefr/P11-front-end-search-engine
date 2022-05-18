@@ -3,6 +3,7 @@
 
 .hidden { display: none;}
 
+/* Mise en forme de bannière Logo */
 header {
 
     img {
@@ -10,12 +11,15 @@ header {
     }
 }
 
+/* Mise en  forme de la barre de Recherche principal */
 #search-field {
 
     background-color: #e7e7e7;
     border: none;
 }
 
+
+/* Mise en forme de des tags de Selection */
 .btn-group {
 
     position: relative;
@@ -28,15 +32,38 @@ header {
     }
 }
 
+.btn {
+	padding: 1.25rem;
+	font-weight: 500;
+}
+
+.bg-green, .bg-green input[type="text"] {
+	background-color: #00dca9;
+	color: white;
+}
+
+.btn.bg-green:hover {
+	background-color: #00a881;
+}
+
+.bg-orange, .bg-orange input[type="text"] {
+	background-color: #ff5a47;
+	color: white;
+}
+
+.btn.bg-orange:hover {
+	background-color: #ff2c14;
+}
 
 
 
+ /* Mise en forme de la liste des recettes */
 .card-deck {
     margin: 0!important;
     position: absolute;
     top: 25rem;
 
-    /* Mise en forme de la liste des recettes */
+   /* mise en forme de la carte Recette */
     #card-list {
 
         .recipe-card {
