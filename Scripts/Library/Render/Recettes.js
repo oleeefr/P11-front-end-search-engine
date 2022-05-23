@@ -15,10 +15,17 @@ export class Recettes {
                                                  recette.ingredients
                                                  ).render();
             //console.log(articleRecette);
-            articles+= articleRecette;
-            
+            articles+= articleRecette;   
         });
+
+        if (listDesRecettes.length==0)
+            articles= this.DisplayNoResult();
+
         domAncrageRecette.innerHTML = articles;
         return domAncrageRecette;
+    }
+
+    static DisplayNoResult () {
+        return "<p>Aucune recette ne correspond à votre critère… vous pouvez chercher « tarte aux pommes », « poisson », etc.</p>";
     }
 }
