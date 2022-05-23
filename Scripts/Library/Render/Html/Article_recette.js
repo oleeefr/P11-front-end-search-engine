@@ -37,7 +37,8 @@ export class Article_Recette {
         let renderIngredients ="";
         ingredients.forEach(ingredient => {
             let unit = (ingredient.hasOwnProperty('unit'))? ingredient.unit:"";
-            let div =`<p class="mb-0"><span class="font-weight-bold ingredient">${ingredient.ingredient}</span>: ${ingredient.quantity} ${unit}</p>\n`;
+            let quantity = (ingredient.hasOwnProperty('quantity'))? ingredient.quantity+":":"";
+            let div =`<p class="mb-0"><span class="font-weight-bold ingredient">${ingredient.ingredient}</span> ${quantity} ${unit}</p>\n`;
             renderIngredients+=div;
         });
         return renderIngredients;

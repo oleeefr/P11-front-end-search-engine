@@ -1,4 +1,4 @@
-import {SearchRecipesRequest} from '../../Main/Requests/SearchRecipesRequest.js' // Changer l'emplacement ?!!
+import {SearchRecipesRequest} from '../Requests/SearchRecipesRequest.js'
 import {Recettes} from '../Render/Recettes.js'
 
 export class SelectRecettes {
