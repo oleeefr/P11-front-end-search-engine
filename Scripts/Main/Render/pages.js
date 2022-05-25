@@ -19,10 +19,11 @@ export async function index () {
                render.recettesDisplay();
        }
     );
+
     render.recettesDisplay();
  }
 
  //// fonction de render (de Vue) pour afficher une page 404..
  export async function notFound404 () {
     console.error ("erreur 404...");
-}
+ }

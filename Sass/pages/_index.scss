@@ -20,18 +20,93 @@ header {
 
 
 /* Mise en forme de des tags de Selection */
-.btn-group {
+  
+    .btn-group {
 
-    position: relative;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    vertical-align: middle;
-
-    .dropdown-parent {
         position: relative;
-    }
-}
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        vertical-align: middle;
+        margin-left: 50px;
+        margin-right: 10px;
+    
+        .dropdown-parent {
+            @include searchTags (#007bff);
+        }
+    
+        /*
+        .dropdown-parent {
+           position: relative;
+           background-color: #007bff;
+           border-radius: 7px;
+           z-index: 5;
+           width: 48%; // etat 0:45% etat 1:48%
+           margin-right: 1rem;
+    
+           input[name="keyIngrédients"] {
+                background-color: #007bff;
+                border: none;
+                height: 60px;
+                width: 330px;
+                font-size: 20px;
+                margin-left: 12px;
+                color: #e1d4d4;
+                //display: none; // etat 1
+    
+                &::placeholder {
+                    color: #e1d4d4;
+                }
+           }
+           .container-list-tags {
+            //display: none; // etat 1
+                .format-text-list {
+                    color: #FFFF;
+                    padding-left: 15px; // etat 1
+    
+                    .format-font-li {
+                        font-size: 23px;
+                        font-weight: lighter;
+                        flex-basis: 31%;
+                        cursor: pointer;
+                        &:hover {
+                            font-weight: 600;
+                        }
+                    }
+            }
+           } 
+           
+    
+            #ingredients-tag-btn {
+                $display-down : block;
+                $display-up: none;
+    
+                &:active {
+                 background-color: #007bff;
+                 border: none;
+    
+                    .switch-down {
+                        display: none;
+                    }
+                    .switch-up {
+                        display: block;
+                    }
+                }
+        
+                .switch-down {
+                    display: $display-down;
+                    padding-bottom: 14px;
+                    padding-top: 14px; // etat 0
+                    width:150px; // etat 0
+                }
+                .switch-up {
+                    display: $display-up;
+                }
+            }       
+        } */
+    } 
 
+
+/*
 .btn {
 	padding: 1.25rem;
 	font-weight: 500;
@@ -55,7 +130,7 @@ header {
 	background-color: #ff2c14;
 }
 
-
+*/
 
  /* Mise en forme de la liste des recettes */
 .card-deck {
