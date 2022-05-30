@@ -9959,8 +9959,9 @@ header img {
   border: none;
 }
 
-/* Mise en forme de des tags de Selection */
-.btn-group {
+/* Mise en forme des boutons tags de Selection */
+/* bouton Tag ingrédients */
+#tag-ingredients .btn-group {
   position: relative;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -10037,15 +10038,14 @@ header img {
       }       
   } */
 }
-.btn-group .dropdown-parent {
+#tag-ingredients .btn-group .dropdown-parent {
   position: relative;
-  background-color: #007bff;
   border-radius: 7px;
   z-index: 5;
   width: 45%;
   margin-right: 1rem;
 }
-.btn-group .dropdown-parent > input {
+#tag-ingredients .btn-group .dropdown-parent > input {
   background-color: #007bff;
   border: none;
   height: 60px;
@@ -10055,70 +10055,184 @@ header img {
   color: #e1d4d4;
   display: none;
 }
-.btn-group .dropdown-parent > input::placeholder {
+#tag-ingredients .btn-group .dropdown-parent > input::placeholder {
   color: #e1d4d4;
 }
-.btn-group .dropdown-parent .container-list-tags {
+#tag-ingredients .btn-group .dropdown-parent .container-list-tags {
   display: none;
 }
-.btn-group .dropdown-parent .container-list-tags .format-text-list {
+#tag-ingredients .btn-group .dropdown-parent .container-list-tags .format-text-list {
   color: #FFFF;
   padding-left: 15px;
 }
-.btn-group .dropdown-parent .container-list-tags .format-text-list .format-font-li {
+#tag-ingredients .btn-group .dropdown-parent .container-list-tags .format-text-list .format-font-li {
   font-size: 23px;
   font-weight: lighter;
   flex-basis: 31%;
   cursor: pointer;
 }
-.btn-group .dropdown-parent .container-list-tags .format-text-list .format-font-li:hover {
+#tag-ingredients .btn-group .dropdown-parent .container-list-tags .format-text-list .format-font-li:hover {
   font-weight: 600;
 }
-.btn-group .dropdown-parent #ingredients-tag-btn:active {
+#tag-ingredients .btn-group .dropdown-parent .tag-btn-skin:active {
   background-color: #007bff;
   border: none;
 }
-.btn-group .dropdown-parent #ingredients-tag-btn:active .switch-down {
+#tag-ingredients .btn-group .dropdown-parent .tag-btn-skin:active .switch-down {
   display: none;
 }
-.btn-group .dropdown-parent #ingredients-tag-btn:active .switch-up {
+#tag-ingredients .btn-group .dropdown-parent .tag-btn-skin:active .switch-up {
   display: block;
 }
-.btn-group .dropdown-parent #ingredients-tag-btn .switch-down {
+#tag-ingredients .btn-group .dropdown-parent .tag-btn-skin:visited {
+  background-color: #007bff;
+}
+#tag-ingredients .btn-group .dropdown-parent .tag-btn-skin .switch-down {
   display: block;
   padding-bottom: 14px;
   padding-top: 14px;
   width: 150px;
 }
-.btn-group .dropdown-parent #ingredients-tag-btn .switch-up {
+#tag-ingredients .btn-group .dropdown-parent .tag-btn-skin .switch-up {
   display: none;
 }
 
-/*
-.btn {
-	padding: 1.25rem;
-	font-weight: 500;
+/* bouton Tag appareils */
+#tag-appareils .btn-group {
+  position: relative;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: middle;
+  margin-left: 50px;
+  margin-right: 10px;
+}
+#tag-appareils .btn-group .dropdown-parent {
+  position: relative;
+  border-radius: 7px;
+  z-index: 5;
+  width: 45%;
+  margin-right: 1rem;
+}
+#tag-appareils .btn-group .dropdown-parent > input {
+  background-color: #28a745;
+  border: none;
+  height: 60px;
+  width: 330px;
+  font-size: 20px;
+  margin-left: 12px;
+  color: #e1d4d4;
+  display: none;
+}
+#tag-appareils .btn-group .dropdown-parent > input::placeholder {
+  color: #e1d4d4;
+}
+#tag-appareils .btn-group .dropdown-parent .container-list-tags {
+  display: none;
+}
+#tag-appareils .btn-group .dropdown-parent .container-list-tags .format-text-list {
+  color: #FFFF;
+  padding-left: 15px;
+}
+#tag-appareils .btn-group .dropdown-parent .container-list-tags .format-text-list .format-font-li {
+  font-size: 23px;
+  font-weight: lighter;
+  flex-basis: 31%;
+  cursor: pointer;
+}
+#tag-appareils .btn-group .dropdown-parent .container-list-tags .format-text-list .format-font-li:hover {
+  font-weight: 600;
+}
+#tag-appareils .btn-group .dropdown-parent .tag-btn-skin:active {
+  background-color: #28a745;
+  border: none;
+}
+#tag-appareils .btn-group .dropdown-parent .tag-btn-skin:active .switch-down {
+  display: none;
+}
+#tag-appareils .btn-group .dropdown-parent .tag-btn-skin:active .switch-up {
+  display: block;
+}
+#tag-appareils .btn-group .dropdown-parent .tag-btn-skin:visited {
+  background-color: #28a745;
+}
+#tag-appareils .btn-group .dropdown-parent .tag-btn-skin .switch-down {
+  display: block;
+  padding-bottom: 14px;
+  padding-top: 14px;
+  width: 150px;
+}
+#tag-appareils .btn-group .dropdown-parent .tag-btn-skin .switch-up {
+  display: none;
 }
 
-.bg-green, .bg-green input[type="text"] {
-	background-color: #00dca9;
-	color: white;
+/* bouton Tag ustensibles */
+#tag-ustensibles .btn-group {
+  position: relative;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: middle;
+  margin-left: 50px;
+  margin-right: 10px;
+}
+#tag-ustensibles .btn-group .dropdown-parent {
+  position: relative;
+  border-radius: 7px;
+  z-index: 5;
+  width: 45%;
+  margin-right: 1rem;
+}
+#tag-ustensibles .btn-group .dropdown-parent > input {
+  background-color: #dc3545;
+  border: none;
+  height: 60px;
+  width: 330px;
+  font-size: 20px;
+  margin-left: 12px;
+  color: #e1d4d4;
+  display: none;
+}
+#tag-ustensibles .btn-group .dropdown-parent > input::placeholder {
+  color: #e1d4d4;
+}
+#tag-ustensibles .btn-group .dropdown-parent .container-list-tags {
+  display: none;
+}
+#tag-ustensibles .btn-group .dropdown-parent .container-list-tags .format-text-list {
+  color: #FFFF;
+  padding-left: 15px;
+}
+#tag-ustensibles .btn-group .dropdown-parent .container-list-tags .format-text-list .format-font-li {
+  font-size: 23px;
+  font-weight: lighter;
+  flex-basis: 31%;
+  cursor: pointer;
+}
+#tag-ustensibles .btn-group .dropdown-parent .container-list-tags .format-text-list .format-font-li:hover {
+  font-weight: 600;
+}
+#tag-ustensibles .btn-group .dropdown-parent .tag-btn-skin:active {
+  background-color: #dc3545;
+  border: none;
+}
+#tag-ustensibles .btn-group .dropdown-parent .tag-btn-skin:active .switch-down {
+  display: none;
+}
+#tag-ustensibles .btn-group .dropdown-parent .tag-btn-skin:active .switch-up {
+  display: block;
+}
+#tag-ustensibles .btn-group .dropdown-parent .tag-btn-skin:visited {
+  background-color: #dc3545;
+}
+#tag-ustensibles .btn-group .dropdown-parent .tag-btn-skin .switch-down {
+  display: block;
+  padding-bottom: 14px;
+  padding-top: 14px;
+  width: 150px;
+}
+#tag-ustensibles .btn-group .dropdown-parent .tag-btn-skin .switch-up {
+  display: none;
 }
 
-.btn.bg-green:hover {
-	background-color: #00a881;
-}
-
-.bg-orange, .bg-orange input[type="text"] {
-	background-color: #ff5a47;
-	color: white;
-}
-
-.btn.bg-orange:hover {
-	background-color: #ff2c14;
-}
-
-*/
 /* Mise en forme de la liste des recettes */
 .card-deck {
   margin: 0 !important;

@@ -1,7 +1,7 @@
 
 @mixin searchTags ($couleurDeFond) {
         position: relative;
-        background-color: $couleurDeFond; //param_1
+        //param_1 etat 1 background-color:$couleurDeFond
         border-radius: 7px;
         z-index: 5;
         width: 45%; // etat 0:45% ou 50 etat 1:48%
@@ -41,7 +41,7 @@
         } 
         
  
-         #ingredients-tag-btn {
+        .tag-btn-skin {
              $display-down : block;
              $display-up: none;
  
@@ -55,6 +55,10 @@
                  .switch-up {
                      display: block;
                  }
+             }
+
+             &:visited {
+                background-color: $couleurDeFond; // param_2
              }
      
              .switch-down {

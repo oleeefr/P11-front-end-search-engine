@@ -19,8 +19,10 @@ header {
 }
 
 
-/* Mise en forme de des tags de Selection */
-  
+/* Mise en forme des boutons tags de Selection */
+  /* bouton Tag ingrédients */
+  #tag-ingredients {
+
     .btn-group {
 
         position: relative;
@@ -33,7 +35,6 @@ header {
         .dropdown-parent {
             @include searchTags (#007bff);
         }
-    
         /*
         .dropdown-parent {
            position: relative;
@@ -104,33 +105,43 @@ header {
             }       
         } */
     } 
+  }
+  
+  /* bouton Tag appareils */
+  #tag-appareils {
 
+    .btn-group {
 
-/*
-.btn {
-	padding: 1.25rem;
-	font-weight: 500;
-}
+        position: relative;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        vertical-align: middle;
+        margin-left: 50px;
+        margin-right: 10px;
+    
+        .dropdown-parent {
+            @include searchTags (#28a745);
+        }
+    } 
+  }
 
-.bg-green, .bg-green input[type="text"] {
-	background-color: #00dca9;
-	color: white;
-}
+  /* bouton Tag ustensibles */
+  #tag-ustensibles {
 
-.btn.bg-green:hover {
-	background-color: #00a881;
-}
+    .btn-group {
 
-.bg-orange, .bg-orange input[type="text"] {
-	background-color: #ff5a47;
-	color: white;
-}
-
-.btn.bg-orange:hover {
-	background-color: #ff2c14;
-}
-
-*/
+        position: relative;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        vertical-align: middle;
+        margin-left: 50px;
+        margin-right: 10px;
+    
+        .dropdown-parent {
+            @include searchTags (#dc3545);
+        }
+    } 
+  }
 
  /* Mise en forme de la liste des recettes */
 .card-deck {
