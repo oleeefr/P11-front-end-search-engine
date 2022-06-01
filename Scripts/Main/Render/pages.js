@@ -3,8 +3,9 @@
 export async function index () {
 
     let render = await import ('../controller/index.js');
-    let renderSearch = await import ('../../Library/Render/SelectRecettes.js');
+    let renderSearchInput = await import ('../../Library/Render/SelectRecettes.js');
     let functions = await import ('../../Utils/utils.js');
+    let rendrerSearchTag = await import ('../../Library/Render/SelectTags.js');
 
     let fieldSearch = document.querySelector('#search-field');
     fieldSearch.addEventListener('input', 
@@ -13,7 +14,7 @@ export async function index () {
             let keyword = event.target.value;
             console.log("mot recherché :"+keyword);
             if (functions.Utils.triggerKeyWord(keyword)) {
-               renderSearch.SelectRecettes.by(keyword, render.allRecettes);
+               renderSearchInput.SelectRecettes.by(keyword, render.allRecettes);
             }
             else 
                render.recettesDisplay();
@@ -25,8 +26,12 @@ export async function index () {
     tags.forEach((tag) => {
        tag.addEventListener(
           'click', (event)=> {
+             let composedPathTag = event.composedPath();
+             let baliseTagName = composedPathTag[5].id;
+             let idNametag = event.currentTarget.id;
+             console.log(event.currentTarget.id);
              console.log('bouton tag pressé..');
-            // render.SelectTags();
+             rendrerSearchTag.SelectTags.modal(event.currentTarget.id);
             }
        );
     }); 

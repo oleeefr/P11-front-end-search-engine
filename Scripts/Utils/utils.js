@@ -41,4 +41,10 @@ export class Utils {
         }
         return false;
     }
+
+    // fonction static renvoyant le nom de du type de tag
+    static filterNameTag (value) {
+            let result = value.toLowerCase().trim().split('-');
+       return  result[1];
+    }
 }
