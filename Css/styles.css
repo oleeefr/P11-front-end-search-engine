@@ -9968,85 +9968,16 @@ header img {
   vertical-align: middle;
   margin-left: 50px;
   margin-right: 10px;
-  /*
-  .dropdown-parent {
-     position: relative;
-     background-color: #007bff;
-     border-radius: 7px;
-     z-index: 5;
-     width: 48%; // etat 0:45% etat 1:48%
-     margin-right: 1rem;
-
-     input[name="keyIngrédients"] {
-          background-color: #007bff;
-          border: none;
-          height: 60px;
-          width: 330px;
-          font-size: 20px;
-          margin-left: 12px;
-          color: #e1d4d4;
-          //display: none; // etat 1
-
-          &::placeholder {
-              color: #e1d4d4;
-          }
-     }
-     .container-list-tags {
-      //display: none; // etat 1
-          .format-text-list {
-              color: #FFFF;
-              padding-left: 15px; // etat 1
-
-              .format-font-li {
-                  font-size: 23px;
-                  font-weight: lighter;
-                  flex-basis: 31%;
-                  cursor: pointer;
-                  &:hover {
-                      font-weight: 600;
-                  }
-              }
-      }
-     } 
-
-
-      #ingredients-tag-btn {
-          $display-down : block;
-          $display-up: none;
-
-          &:active {
-           background-color: #007bff;
-           border: none;
-
-              .switch-down {
-                  display: none;
-              }
-              .switch-up {
-                  display: block;
-              }
-          }
-
-          .switch-down {
-              display: $display-down;
-              padding-bottom: 14px;
-              padding-top: 14px; // etat 0
-              width:150px; // etat 0
-          }
-          .switch-up {
-              display: $display-up;
-          }
-      }       
-  } */
 }
 #tag-ingredients .btn-group .dropdown-parent {
   position: relative;
+  background-color: transparent;
   border-radius: 7px;
   z-index: 5;
   width: 45%;
   margin-right: 1rem;
 }
-#tag-ingredients .btn-group .dropdown-parent > input {
-  background-color: #007bff;
+#tag-ingredients .btn-group .dropdown-parent .menu-tag input {
   border: none;
   height: 60px;
   width: 330px;
@@ -10055,8 +9986,31 @@ header img {
   color: #e1d4d4;
   display: none;
 }
-#tag-ingredients .btn-group .dropdown-parent > input::placeholder {
+#tag-ingredients .btn-group .dropdown-parent .menu-tag input::placeholder {
   color: #e1d4d4;
+}
+#tag-ingredients .btn-group .dropdown-parent .menu-tag .tag-btn-skin {
+  /*
+  &:active {
+   background-color: $couleurDeFond; // param_2
+   border: none;
+
+      .switch-down {
+          display: none;
+      }
+      .switch-up {
+          display: block;
+      }
+  }*/
+}
+#tag-ingredients .btn-group .dropdown-parent .menu-tag .tag-btn-skin .switch-down {
+  display: block;
+  padding-bottom: 14px;
+  padding-top: 14px;
+  width: 150px;
+}
+#tag-ingredients .btn-group .dropdown-parent .menu-tag .tag-btn-skin .switch-up {
+  display: none;
 }
 #tag-ingredients .btn-group .dropdown-parent .container-list-tags {
   display: none;
@@ -10074,27 +10028,63 @@ header img {
 #tag-ingredients .btn-group .dropdown-parent .container-list-tags .format-text-list .format-font-li:hover {
   font-weight: 600;
 }
-#tag-ingredients .btn-group .dropdown-parent .tag-btn-skin:active {
+#tag-ingredients .btn-group .dropdown-parent-active {
+  position: relative;
+  background-color: #007bff;
+  border-radius: 7px;
+  z-index: 5;
+  width: 100%;
+  margin-right: 1rem;
+}
+#tag-ingredients .btn-group .dropdown-parent-active .menu-tag {
+  display: flex;
+  justify-content: space-between;
+}
+#tag-ingredients .btn-group .dropdown-parent-active .menu-tag input {
   background-color: #007bff;
   border: none;
-}
-#tag-ingredients .btn-group .dropdown-parent .tag-btn-skin:active .switch-down {
-  display: none;
-}
-#tag-ingredients .btn-group .dropdown-parent .tag-btn-skin:active .switch-up {
+  height: 60px;
+  width: 100%;
+  font-size: 20px;
+  margin-left: 30px;
+  color: #e1d4d4;
   display: block;
 }
-#tag-ingredients .btn-group .dropdown-parent .tag-btn-skin:visited {
+#tag-ingredients .btn-group .dropdown-parent-active .menu-tag input::placeholder {
+  color: #e1d4d4;
+}
+#tag-ingredients .btn-group .dropdown-parent-active .menu-tag .tag-btn-skin {
+  border: none;
   background-color: #007bff;
 }
-#tag-ingredients .btn-group .dropdown-parent .tag-btn-skin .switch-down {
-  display: block;
+#tag-ingredients .btn-group .dropdown-parent-active .menu-tag .tag-btn-skin:visited {
+  background-color: #007bff;
+}
+#tag-ingredients .btn-group .dropdown-parent-active .menu-tag .tag-btn-skin .switch-down {
+  display: none;
   padding-bottom: 14px;
   padding-top: 14px;
   width: 150px;
 }
-#tag-ingredients .btn-group .dropdown-parent .tag-btn-skin .switch-up {
-  display: none;
+#tag-ingredients .btn-group .dropdown-parent-active .menu-tag .tag-btn-skin .switch-up {
+  display: block;
+}
+#tag-ingredients .btn-group .dropdown-parent-active .container-list-tags {
+  display: block;
+}
+#tag-ingredients .btn-group .dropdown-parent-active .container-list-tags .format-text-list {
+  color: #FFFF;
+  padding-left: 30px;
+  padding-top: 15px;
+}
+#tag-ingredients .btn-group .dropdown-parent-active .container-list-tags .format-text-list .format-font-li {
+  font-size: 23px;
+  font-weight: lighter;
+  flex-basis: 31%;
+  cursor: pointer;
+}
+#tag-ingredients .btn-group .dropdown-parent-active .container-list-tags .format-text-list .format-font-li:hover {
+  font-weight: 600;
 }
 
 /* bouton Tag appareils */
@@ -10108,13 +10098,13 @@ header img {
 }
 #tag-appareils .btn-group .dropdown-parent {
   position: relative;
+  background-color: transparent;
   border-radius: 7px;
   z-index: 5;
   width: 45%;
   margin-right: 1rem;
 }
-#tag-appareils .btn-group .dropdown-parent > input {
-  background-color: #28a745;
+#tag-appareils .btn-group .dropdown-parent .menu-tag input {
   border: none;
   height: 60px;
   width: 330px;
@@ -10123,8 +10113,31 @@ header img {
   color: #e1d4d4;
   display: none;
 }
-#tag-appareils .btn-group .dropdown-parent > input::placeholder {
+#tag-appareils .btn-group .dropdown-parent .menu-tag input::placeholder {
   color: #e1d4d4;
+}
+#tag-appareils .btn-group .dropdown-parent .menu-tag .tag-btn-skin {
+  /*
+  &:active {
+   background-color: $couleurDeFond; // param_2
+   border: none;
+
+      .switch-down {
+          display: none;
+      }
+      .switch-up {
+          display: block;
+      }
+  }*/
+}
+#tag-appareils .btn-group .dropdown-parent .menu-tag .tag-btn-skin .switch-down {
+  display: block;
+  padding-bottom: 14px;
+  padding-top: 14px;
+  width: 150px;
+}
+#tag-appareils .btn-group .dropdown-parent .menu-tag .tag-btn-skin .switch-up {
+  display: none;
 }
 #tag-appareils .btn-group .dropdown-parent .container-list-tags {
   display: none;
@@ -10142,28 +10155,6 @@ header img {
 #tag-appareils .btn-group .dropdown-parent .container-list-tags .format-text-list .format-font-li:hover {
   font-weight: 600;
 }
-#tag-appareils .btn-group .dropdown-parent .tag-btn-skin:active {
-  background-color: #28a745;
-  border: none;
-}
-#tag-appareils .btn-group .dropdown-parent .tag-btn-skin:active .switch-down {
-  display: none;
-}
-#tag-appareils .btn-group .dropdown-parent .tag-btn-skin:active .switch-up {
-  display: block;
-}
-#tag-appareils .btn-group .dropdown-parent .tag-btn-skin:visited {
-  background-color: #28a745;
-}
-#tag-appareils .btn-group .dropdown-parent .tag-btn-skin .switch-down {
-  display: block;
-  padding-bottom: 14px;
-  padding-top: 14px;
-  width: 150px;
-}
-#tag-appareils .btn-group .dropdown-parent .tag-btn-skin .switch-up {
-  display: none;
-}
 
 /* bouton Tag ustensibles */
 #tag-ustensibles .btn-group {
@@ -10176,13 +10167,13 @@ header img {
 }
 #tag-ustensibles .btn-group .dropdown-parent {
   position: relative;
+  background-color: transparent;
   border-radius: 7px;
   z-index: 5;
   width: 45%;
   margin-right: 1rem;
 }
-#tag-ustensibles .btn-group .dropdown-parent > input {
-  background-color: #dc3545;
+#tag-ustensibles .btn-group .dropdown-parent .menu-tag input {
   border: none;
   height: 60px;
   width: 330px;
@@ -10191,8 +10182,31 @@ header img {
   color: #e1d4d4;
   display: none;
 }
-#tag-ustensibles .btn-group .dropdown-parent > input::placeholder {
+#tag-ustensibles .btn-group .dropdown-parent .menu-tag input::placeholder {
   color: #e1d4d4;
+}
+#tag-ustensibles .btn-group .dropdown-parent .menu-tag .tag-btn-skin {
+  /*
+  &:active {
+   background-color: $couleurDeFond; // param_2
+   border: none;
+
+      .switch-down {
+          display: none;
+      }
+      .switch-up {
+          display: block;
+      }
+  }*/
+}
+#tag-ustensibles .btn-group .dropdown-parent .menu-tag .tag-btn-skin .switch-down {
+  display: block;
+  padding-bottom: 14px;
+  padding-top: 14px;
+  width: 150px;
+}
+#tag-ustensibles .btn-group .dropdown-parent .menu-tag .tag-btn-skin .switch-up {
+  display: none;
 }
 #tag-ustensibles .btn-group .dropdown-parent .container-list-tags {
   display: none;
@@ -10209,28 +10223,6 @@ header img {
 }
 #tag-ustensibles .btn-group .dropdown-parent .container-list-tags .format-text-list .format-font-li:hover {
   font-weight: 600;
-}
-#tag-ustensibles .btn-group .dropdown-parent .tag-btn-skin:active {
-  background-color: #dc3545;
-  border: none;
-}
-#tag-ustensibles .btn-group .dropdown-parent .tag-btn-skin:active .switch-down {
-  display: none;
-}
-#tag-ustensibles .btn-group .dropdown-parent .tag-btn-skin:active .switch-up {
-  display: block;
-}
-#tag-ustensibles .btn-group .dropdown-parent .tag-btn-skin:visited {
-  background-color: #dc3545;
-}
-#tag-ustensibles .btn-group .dropdown-parent .tag-btn-skin .switch-down {
-  display: block;
-  padding-bottom: 14px;
-  padding-top: 14px;
-  width: 150px;
-}
-#tag-ustensibles .btn-group .dropdown-parent .tag-btn-skin .switch-up {
-  display: none;
 }
 
 /* Mise en forme de la liste des recettes */

@@ -31,19 +31,20 @@
       <!-- mots clé des tags mise en Recherche -->
       <div id="tags-selectionnes" class="mx-5"></div>
       <!-- Champs des tags à Rechercher -->
-      <div class="row">
+      <div class="row tags">
         <div id="tag-ingredients">
           <div class="btn-group">
             <div class="dropdown-parent">
-              <input name="keyIngrédients" type="text" placeholder="Entrée un ingrédient.." />
-              <button id="ingredients-tag-btn" class="btn btn-primary btn-lg mx-2 tag-btn show tag-btn-skin" type="button">
-                <span class="switch-down">
-                  <span>Ingrédients &nbsp;</span><span class="fas fa-chevron-down" aria-hidden="true"></span>
-                </span>
-                <span class="fas fa-chevron-up switch-up" aria-hidden="true"></span>
-              </button>
+              <div class="menu-tag"></span><input name="keyIngrédients" type="text" placeholder="Entrée un ingrédient.." /></span>
+                <button id="ingredients-tag-btn" class="btn btn-primary btn-lg mx-2 tag-btn show tag-btn-skin" type="button">
+                  <span class="switch-down">
+                    <span>Ingrédients &nbsp;</span><span class="fas fa-chevron-down" aria-hidden="true"></span>
+                  </span>
+                  <span class="fas fa-chevron-up switch-up" aria-hidden="true"></span>
+                </button>
+              </div>
               <!-- mots clé de Recherche des tags-->
-                <!-- inclusion dynamique -->
+              <!-- inclusion dynamique -->
               <div class="container-list-tags">
                 <ul class="list-inline format-text-list d-flex flex-wrap">
                   <li class="list-inline-item format-font-li pb-3">test 1</li>
@@ -62,115 +63,86 @@
                   <li class="list-inline-item format-font-li pb-3">test 14</li>
                 </ul>
               </div>
-            <!-- ml-3 ml-md-5 mt-3 -->
-          </div>
-         
+            </div>
           </div>
         </div>    
         <div id="tag-appareils">
            <div class="btn-group">
             <div class="dropdown-parent">
-              <!--<input name="keyApareils" type="text" placeholder="Entrée un apareil.." />-->
-              <button id="apareils-tag-btn" class="btn btn-success btn-lg mx-2 tag-btn show tag-btn-skin" type="button">
-                <span class="switch-down">
-                  <span>Appareils &nbsp;</span><span class="fas fa-chevron-down" aria-hidden="true"></span>
-                </span>
-                <span class="fas fa-chevron-up switch-up" aria-hidden="true"></span>
-              </button>
+              <div class="menu-tag">
+                <span><input name="keyApareils" type="text" placeholder="Entrée un apareil.." /></span>
+                <button id="apareils-tag-btn" class="btn btn-success btn-lg mx-2 tag-btn show tag-btn-skin" type="button">
+                  <span class="switch-down">
+                    <span>Appareils &nbsp;</span><span class="fas fa-chevron-down" aria-hidden="true"></span>
+                  </span>
+                  <span class="fas fa-chevron-up switch-up" aria-hidden="true"></span>
+                </button>
+              </div>
                <!-- mots clé de Recherche des tags-->
                 <!-- inclusion dynamique -->
-                <div class="container-list-tags">
-                  <ul class="list-inline format-text-list d-flex flex-wrap">
-                    <li class="list-inline-item format-font-li pb-3">test a</li>
-                    <li class="list-inline-item format-font-li pb-3">test b</li>
-                    <li class="list-inline-item format-font-li pb-3">test c</li>
-                    <li class="list-inline-item format-font-li pb-3">test d</li>
-                    <li class="list-inline-item format-font-li pb-3">test e</li>
-                    <li class="list-inline-item format-font-li pb-3">test f</li>
-                    <li class="list-inline-item format-font-li pb-3">test g</li>
-                    <li class="list-inline-item format-font-li pb-3">test h</li>
-                    <li class="list-inline-item format-font-li pb-3">test i</li>
-                    <li class="list-inline-item format-font-li pb-3">test j</li>
-                    <li class="list-inline-item format-font-li pb-3">test k</li>
-                    <li class="list-inline-item format-font-li pb-3">test l</li>
-                    <li class="list-inline-item format-font-li pb-3">test m</li>
-                    <li class="list-inline-item format-font-li pb-3">test n</li>
-                  </ul>
-                </div>
+              <div class="container-list-tags">
+                <ul class="list-inline format-text-list d-flex flex-wrap">
+                  <li class="list-inline-item format-font-li pb-3">test a</li>
+                  <li class="list-inline-item format-font-li pb-3">test b</li>
+                  <li class="list-inline-item format-font-li pb-3">test c</li>
+                  <li class="list-inline-item format-font-li pb-3">test d</li>
+                  <li class="list-inline-item format-font-li pb-3">test e</li>
+                  <li class="list-inline-item format-font-li pb-3">test f</li>
+                  <li class="list-inline-item format-font-li pb-3">test g</li>
+                  <li class="list-inline-item format-font-li pb-3">test h</li>
+                  <li class="list-inline-item format-font-li pb-3">test i</li>
+                  <li class="list-inline-item format-font-li pb-3">test j</li>
+                  <li class="list-inline-item format-font-li pb-3">test k</li>
+                  <li class="list-inline-item format-font-li pb-3">test l</li>
+                  <li class="list-inline-item format-font-li pb-3">test m</li>
+                  <li class="list-inline-item format-font-li pb-3">test n</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
         <div id="tag-ustensibles">
           <div class="btn-group">
            <div class="dropdown-parent">
-             <!--<input name="keyApareils" type="text" placeholder="Entrée un apareil.." />-->
-             <button id="apareils-tag-btn" class="btn btn-danger btn-lg mx-2 tag-btn show tag-btn-skin" type="button">
-               <span class="switch-down">
-                 <span>Appareils &nbsp;</span><span class="fas fa-chevron-down" aria-hidden="true"></span>
-               </span>
-               <span class="fas fa-chevron-up switch-up" aria-hidden="true"></span>
-             </button>
+            <div class="menu-tag">
+              <span><input name="keyUstensible" type="text" placeholder="Entrée un ustensible.." /></span>
+              <button id="ustensible-tag-btn" class="btn btn-danger btn-lg mx-2 tag-btn show tag-btn-skin" type="button">
+                <span class="switch-down">
+                  <span>Ustensible &nbsp;</span><span class="fas fa-chevron-down" aria-hidden="true"></span>
+                </span>
+                <span class="fas fa-chevron-up switch-up" aria-hidden="true"></span>
+              </button>
+            </div>
               <!-- mots clé de Recherche des tags-->
                <!-- inclusion dynamique -->
-               <div class="container-list-tags">
-                 <ul class="list-inline format-text-list d-flex flex-wrap">
-                   <li class="list-inline-item format-font-li pb-3">test a</li>
-                   <li class="list-inline-item format-font-li pb-3">test b</li>
-                   <li class="list-inline-item format-font-li pb-3">test c</li>
-                   <li class="list-inline-item format-font-li pb-3">test d</li>
-                   <li class="list-inline-item format-font-li pb-3">test e</li>
-                   <li class="list-inline-item format-font-li pb-3">test f</li>
-                   <li class="list-inline-item format-font-li pb-3">test g</li>
-                   <li class="list-inline-item format-font-li pb-3">test h</li>
-                   <li class="list-inline-item format-font-li pb-3">test i</li>
-                   <li class="list-inline-item format-font-li pb-3">test j</li>
-                   <li class="list-inline-item format-font-li pb-3">test k</li>
-                   <li class="list-inline-item format-font-li pb-3">test l</li>
-                   <li class="list-inline-item format-font-li pb-3">test m</li>
-                   <li class="list-inline-item format-font-li pb-3">test n</li>
-                 </ul>
-               </div>
+            <div class="container-list-tags">
+              <ul class="list-inline format-text-list d-flex flex-wrap">
+                <li class="list-inline-item format-font-li pb-3">test a</li>
+                <li class="list-inline-item format-font-li pb-3">test b</li>
+                <li class="list-inline-item format-font-li pb-3">test c</li>
+                <li class="list-inline-item format-font-li pb-3">test d</li>
+                <li class="list-inline-item format-font-li pb-3">test e</li>
+                <li class="list-inline-item format-font-li pb-3">test f</li>
+                <li class="list-inline-item format-font-li pb-3">test g</li>
+                <li class="list-inline-item format-font-li pb-3">test h</li>
+                <li class="list-inline-item format-font-li pb-3">test i</li>
+                <li class="list-inline-item format-font-li pb-3">test j</li>
+                <li class="list-inline-item format-font-li pb-3">test k</li>
+                <li class="list-inline-item format-font-li pb-3">test l</li>
+                <li class="list-inline-item format-font-li pb-3">test m</li>
+                <li class="list-inline-item format-font-li pb-3">test n</li>
+              </ul>
+            </div>
            </div>
          </div>
-       </div>
+        </div>
       </div>
-    
       <!-- Affichage des cards de Recettes -->
       <div class="card-deck pl-4">
   			<div id="card-list" class="d-flex flex-wrap" >
          
         </div>
       </div>
-      <!-- 
-        <nav aria-label="recherche">
-            <form name="recherche"><input type="text" name="saisie" />
-              <div id="icon-tags"></div>
-              <div id="recherche-tags">
-                <input list="ingrédients" id="Ingrédients"/>
-                <datalist id="ingrédients">
-                  <option value="coco">
-                  <option value="beurre">
-                  <option value="farine">
-                  <option value="banane">
-                  <option value="fruit">
-                </datalist>
-                <input list="apareils" id="Apareils"/>
-                <input list="ustensibles" id="Ustensibles"/>
-              </div>
-            </form>   
-        </nav>
-        <section id="Liste-recettes">
-          <h2 class="hidden">Liste-recettes</h2>
-          <article>
-            <img src="/" alt="image de la recette"/>
-            <h2>Titre de la recette</h2>
-            <dl>
-              <dt class="hidden">title recette</dt>
-              <dd>test image</dd>
-            </dl>
-          </article>
-        </section>-->
-
     </main>
   <script type="module" src="Scripts/Main/main.js"></script>
   </body>

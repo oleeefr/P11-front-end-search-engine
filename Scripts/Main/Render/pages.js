@@ -20,6 +20,14 @@ export async function index () {
        }
     );
 
+    let tags = document.querySelectorAll('.tags button');
+    console.log(tags);
+    tags.forEach((tag) => {
+       tag.addEventListener(
+          'click', (event)=> {console.log('bouton tag pressé..');}
+       );
+    }); 
+
     render.recettesDisplay();
  }
 
