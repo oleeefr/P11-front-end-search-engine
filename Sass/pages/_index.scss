@@ -57,6 +57,10 @@ header {
         .dropdown-parent {
             @include searchTags;
         }
+
+        .dropdown-parent-active{
+            @include searchTagsActive (#218838);
+        }
     } 
   }
 
@@ -74,6 +78,10 @@ header {
     
         .dropdown-parent {
             @include searchTags;
+        }
+
+        .dropdown-parent-active{
+            @include searchTagsActive (#c82333);
         }
     } 
   }

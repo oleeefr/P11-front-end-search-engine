@@ -24,7 +24,10 @@ export async function index () {
     console.log(tags);
     tags.forEach((tag) => {
        tag.addEventListener(
-          'click', (event)=> {console.log('bouton tag pressé..');}
+          'click', (event)=> {
+             console.log('bouton tag pressé..');
+            // render.SelectTags();
+            }
        );
     }); 
 

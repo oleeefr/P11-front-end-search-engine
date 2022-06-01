@@ -10155,6 +10155,64 @@ header img {
 #tag-appareils .btn-group .dropdown-parent .container-list-tags .format-text-list .format-font-li:hover {
   font-weight: 600;
 }
+#tag-appareils .btn-group .dropdown-parent-active {
+  position: relative;
+  background-color: #218838;
+  border-radius: 7px;
+  z-index: 5;
+  width: 100%;
+  margin-right: 1rem;
+}
+#tag-appareils .btn-group .dropdown-parent-active .menu-tag {
+  display: flex;
+  justify-content: space-between;
+}
+#tag-appareils .btn-group .dropdown-parent-active .menu-tag input {
+  background-color: #218838;
+  border: none;
+  height: 60px;
+  width: 100%;
+  font-size: 20px;
+  margin-left: 30px;
+  color: #e1d4d4;
+  display: block;
+}
+#tag-appareils .btn-group .dropdown-parent-active .menu-tag input::placeholder {
+  color: #e1d4d4;
+}
+#tag-appareils .btn-group .dropdown-parent-active .menu-tag .tag-btn-skin {
+  border: none;
+  background-color: #218838;
+}
+#tag-appareils .btn-group .dropdown-parent-active .menu-tag .tag-btn-skin:visited {
+  background-color: #218838;
+}
+#tag-appareils .btn-group .dropdown-parent-active .menu-tag .tag-btn-skin .switch-down {
+  display: none;
+  padding-bottom: 14px;
+  padding-top: 14px;
+  width: 150px;
+}
+#tag-appareils .btn-group .dropdown-parent-active .menu-tag .tag-btn-skin .switch-up {
+  display: block;
+}
+#tag-appareils .btn-group .dropdown-parent-active .container-list-tags {
+  display: block;
+}
+#tag-appareils .btn-group .dropdown-parent-active .container-list-tags .format-text-list {
+  color: #FFFF;
+  padding-left: 30px;
+  padding-top: 15px;
+}
+#tag-appareils .btn-group .dropdown-parent-active .container-list-tags .format-text-list .format-font-li {
+  font-size: 23px;
+  font-weight: lighter;
+  flex-basis: 31%;
+  cursor: pointer;
+}
+#tag-appareils .btn-group .dropdown-parent-active .container-list-tags .format-text-list .format-font-li:hover {
+  font-weight: 600;
+}
 
 /* bouton Tag ustensibles */
 #tag-ustensibles .btn-group {
@@ -10222,6 +10280,64 @@ header img {
   cursor: pointer;
 }
 #tag-ustensibles .btn-group .dropdown-parent .container-list-tags .format-text-list .format-font-li:hover {
+  font-weight: 600;
+}
+#tag-ustensibles .btn-group .dropdown-parent-active {
+  position: relative;
+  background-color: #c82333;
+  border-radius: 7px;
+  z-index: 5;
+  width: 100%;
+  margin-right: 1rem;
+}
+#tag-ustensibles .btn-group .dropdown-parent-active .menu-tag {
+  display: flex;
+  justify-content: space-between;
+}
+#tag-ustensibles .btn-group .dropdown-parent-active .menu-tag input {
+  background-color: #c82333;
+  border: none;
+  height: 60px;
+  width: 100%;
+  font-size: 20px;
+  margin-left: 30px;
+  color: #e1d4d4;
+  display: block;
+}
+#tag-ustensibles .btn-group .dropdown-parent-active .menu-tag input::placeholder {
+  color: #e1d4d4;
+}
+#tag-ustensibles .btn-group .dropdown-parent-active .menu-tag .tag-btn-skin {
+  border: none;
+  background-color: #c82333;
+}
+#tag-ustensibles .btn-group .dropdown-parent-active .menu-tag .tag-btn-skin:visited {
+  background-color: #c82333;
+}
+#tag-ustensibles .btn-group .dropdown-parent-active .menu-tag .tag-btn-skin .switch-down {
+  display: none;
+  padding-bottom: 14px;
+  padding-top: 14px;
+  width: 150px;
+}
+#tag-ustensibles .btn-group .dropdown-parent-active .menu-tag .tag-btn-skin .switch-up {
+  display: block;
+}
+#tag-ustensibles .btn-group .dropdown-parent-active .container-list-tags {
+  display: block;
+}
+#tag-ustensibles .btn-group .dropdown-parent-active .container-list-tags .format-text-list {
+  color: #FFFF;
+  padding-left: 30px;
+  padding-top: 15px;
+}
+#tag-ustensibles .btn-group .dropdown-parent-active .container-list-tags .format-text-list .format-font-li {
+  font-size: 23px;
+  font-weight: lighter;
+  flex-basis: 31%;
+  cursor: pointer;
+}
+#tag-ustensibles .btn-group .dropdown-parent-active .container-list-tags .format-text-list .format-font-li:hover {
   font-weight: 600;
 }
 
