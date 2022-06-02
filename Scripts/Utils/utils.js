@@ -47,4 +47,10 @@ export class Utils {
             let result = value.toLowerCase().trim().split('-');
        return  result[1];
     }
+
+    // fonction supprimant un élèment dans un tableau
+    static deleteElementinArray (element, array) {
+       let indeOfElement = array.indexOf(element);
+       if(indeOfElement>=0) array.splice (indeOfElement, 1);
+    }
 }

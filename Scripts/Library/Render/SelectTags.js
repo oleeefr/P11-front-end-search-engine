@@ -1,4 +1,6 @@
 import {Utils} from '../../Utils/utils.js';
+import {iconTags} from '../../Library/Render/iconTags.js';
+
 
 export class SelectTags {
 
@@ -27,6 +29,21 @@ export class SelectTags {
             if (selectTag != parentElementTagIdName) tag.className="openClose dropdown-parent";
         });
 
+    }
+
+    static createKeywordIconTag (keyword, tagCategory, menuListIconTags) {
+        let resultIconTag;
+        console.log("création en cours d'un icon-tag : "+keyword);
+        let tabIconTag = new iconTags(menuListIconTags);
+        resultIconTag = tabIconTag.addKeyword(keyword,tagCategory);
+        tabIconTag.display();
+        console.log("fin de traitement..");
+        return resultIconTag;
+    }
+
+    static getMenuIconTags () {
+        let iconTags = []
+        return iconTags;
     }
 
 }

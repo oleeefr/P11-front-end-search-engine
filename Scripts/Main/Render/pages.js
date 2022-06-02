@@ -6,7 +6,8 @@ export async function index () {
     let renderSearchInput = await import ('../../Library/Render/SelectRecettes.js');
     let functions = await import ('../../Utils/utils.js');
     let rendrerSearchTag = await import ('../../Library/Render/SelectTags.js');
-
+   
+    // Gestion de saisie dans la barre de Recherche principal
     let fieldSearch = document.querySelector('#search-field');
     fieldSearch.addEventListener('input', 
        (event)=> {
@@ -20,21 +21,35 @@ export async function index () {
                render.recettesDisplay();
        }
     );
-
+   
+    // Ouverture & Fermeture de la modale de tag
     let tags = document.querySelectorAll('.tags button');
     console.log(tags);
     tags.forEach((tag) => {
        tag.addEventListener(
           'click', (event)=> {
-             let composedPathTag = event.composedPath();
-             let baliseTagName = composedPathTag[5].id;
-             let idNametag = event.currentTarget.id;
+
              console.log(event.currentTarget.id);
              console.log('bouton tag pressé..');
              rendrerSearchTag.SelectTags.modal(event.currentTarget.id);
             }
        );
     }); 
+
+    // Gestion de la selection des mots tag de la liste
+    let menuIconTagSelected = rendrerSearchTag.SelectTags.getMenuIconTags();
+    let keywordsTags = document.querySelectorAll ('.container-list-tags ul');
+    console.log(keywordsTags);
+    keywordsTags.forEach( (keywordsTag) => {
+      keywordsTag.addEventListener('click', (event) => {
+
+         console.log(event.currentTarget.id);
+         console.log('bouton mot tag Li pressé..');
+         menuIconTagSelected = rendrerSearchTag.SelectTags.createKeywordIconTag( event.target.innerHTML, 
+                                                                                 event.currentTarget.id,
+                                                                                 menuIconTagSelected );
+      });
+    });
 
     render.recettesDisplay();
  }
