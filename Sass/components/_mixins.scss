@@ -80,7 +80,7 @@
 
 @mixin searchTagsActive ($couleurDeFond) {
     position: relative;
-    background-color:$couleurDeFond; //param_1 etat 1 
+    background-color:$couleurDeFond;
     border-radius: 7px;
     z-index: 5;
     width: 100%;
@@ -90,15 +90,17 @@
         display:flex;
         justify-content: space-between;
 
-        input { //param_2
-            background-color: $couleurDeFond;// param_1
+        input { 
+            background-color: $couleurDeFond;
             border: none;
             height: 60px;
-            width: 100%;
+            width: 290%;
             font-size: 20px;
             margin-left: 30px;
+            margin-top: 8px;
             color: #e1d4d4;
-            display:block ; // etat 0 none
+            display:block;
+            outline: none;
 
             &::placeholder {
                 color: #e1d4d4;
@@ -106,14 +108,15 @@
         }
 
         .tag-btn-skin {
-            $display-down : block;
-            $display-up: none;
             border: none;
             background-color: $couleurDeFond;
             
-            &:visited {
+            /*
+            &:visited
+            &:active {
                 background-color: $couleurDeFond; // param_2
-            }
+                border: none;
+            }*/
 
             .switch-down {
                 display: none;
@@ -128,7 +131,7 @@
     }
 
     .container-list-tags {
-        display: block; // etat 0 none
+        display: block; 
             .format-text-list {
                 color: #FFFF;
                 padding-left: 30px;
@@ -139,6 +142,7 @@
                     font-weight: lighter;
                     flex-basis: 31%;
                     cursor: pointer;
+
                     &:hover {
                         font-weight: 600;
                     }

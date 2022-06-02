@@ -20,6 +20,15 @@ header {
 
 
 /* Mise en forme des boutons tags de Selection */
+  /* bouton mot icone tag */
+  #tags-selectionnes {
+      margin-bottom: 15px;
+
+      button {
+        margin-right: 35px;
+      }
+  }
+
   /* bouton Tag ingrédients */
   #tag-ingredients {
 

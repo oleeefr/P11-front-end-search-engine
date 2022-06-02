@@ -9960,6 +9960,14 @@ header img {
 }
 
 /* Mise en forme des boutons tags de Selection */
+/* bouton mot icone tag */
+#tags-selectionnes {
+  margin-bottom: 15px;
+}
+#tags-selectionnes button {
+  margin-right: 35px;
+}
+
 /* bouton Tag ingrédients */
 #tag-ingredients .btn-group {
   position: relative;
@@ -10044,11 +10052,13 @@ header img {
   background-color: #007bff;
   border: none;
   height: 60px;
-  width: 100%;
+  width: 290%;
   font-size: 20px;
   margin-left: 30px;
+  margin-top: 8px;
   color: #e1d4d4;
   display: block;
+  outline: none;
 }
 #tag-ingredients .btn-group .dropdown-parent-active .menu-tag input::placeholder {
   color: #e1d4d4;
@@ -10056,9 +10066,12 @@ header img {
 #tag-ingredients .btn-group .dropdown-parent-active .menu-tag .tag-btn-skin {
   border: none;
   background-color: #007bff;
-}
-#tag-ingredients .btn-group .dropdown-parent-active .menu-tag .tag-btn-skin:visited {
-  background-color: #007bff;
+  /*
+  &:visited
+  &:active {
+      background-color: $couleurDeFond; // param_2
+      border: none;
+  }*/
 }
 #tag-ingredients .btn-group .dropdown-parent-active .menu-tag .tag-btn-skin .switch-down {
   display: none;
@@ -10171,11 +10184,13 @@ header img {
   background-color: #218838;
   border: none;
   height: 60px;
-  width: 100%;
+  width: 290%;
   font-size: 20px;
   margin-left: 30px;
+  margin-top: 8px;
   color: #e1d4d4;
   display: block;
+  outline: none;
 }
 #tag-appareils .btn-group .dropdown-parent-active .menu-tag input::placeholder {
   color: #e1d4d4;
@@ -10183,9 +10198,12 @@ header img {
 #tag-appareils .btn-group .dropdown-parent-active .menu-tag .tag-btn-skin {
   border: none;
   background-color: #218838;
-}
-#tag-appareils .btn-group .dropdown-parent-active .menu-tag .tag-btn-skin:visited {
-  background-color: #218838;
+  /*
+  &:visited
+  &:active {
+      background-color: $couleurDeFond; // param_2
+      border: none;
+  }*/
 }
 #tag-appareils .btn-group .dropdown-parent-active .menu-tag .tag-btn-skin .switch-down {
   display: none;
@@ -10298,11 +10316,13 @@ header img {
   background-color: #c82333;
   border: none;
   height: 60px;
-  width: 100%;
+  width: 290%;
   font-size: 20px;
   margin-left: 30px;
+  margin-top: 8px;
   color: #e1d4d4;
   display: block;
+  outline: none;
 }
 #tag-ustensibles .btn-group .dropdown-parent-active .menu-tag input::placeholder {
   color: #e1d4d4;
@@ -10310,9 +10330,12 @@ header img {
 #tag-ustensibles .btn-group .dropdown-parent-active .menu-tag .tag-btn-skin {
   border: none;
   background-color: #c82333;
-}
-#tag-ustensibles .btn-group .dropdown-parent-active .menu-tag .tag-btn-skin:visited {
-  background-color: #c82333;
+  /*
+  &:visited
+  &:active {
+      background-color: $couleurDeFond; // param_2
+      border: none;
+  }*/
 }
 #tag-ustensibles .btn-group .dropdown-parent-active .menu-tag .tag-btn-skin .switch-down {
   display: none;
