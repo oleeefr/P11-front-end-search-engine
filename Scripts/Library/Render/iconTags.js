@@ -11,7 +11,7 @@ export class iconTags {
 
         this.keyword = keyword;
         this.categoryTag = Utils.filterNameTag(categoryTag);
-        if (this.controlFindInArray (this.keyword)) {
+        if (this.controlFindInIconTagArray (this.keyword).valid) {
 
             this.listIconTags.push({
                 key:this.keyword, 
@@ -20,6 +20,15 @@ export class iconTags {
         }
         console.log(this.listIconTags);
         return this.listIconTags;
+    }
+
+    removeKeyword (keyword) 
+    {
+        let indexOfTag = this.controlFindInIconTagArray(keyword).indexOf;
+        if (indexOfTag>=0) {
+            this.listIconTags.splice (indexOfTag, 1);
+        }
+        this.display(); 
     }
 
     display () {
@@ -34,19 +43,28 @@ export class iconTags {
         let selectAllButtonIconTags = document.querySelectorAll('#tags-selectionnes button');
         selectAllButtonIconTags.forEach(menuIcon =>{
             menuIcon.addEventListener('click', (event) => {
-              console.log("fonction de suppression..");  
+              console.log("fonction de suppression..");
+              let keyword = Utils.getFormatToLowerCaseAndLmString(event.target.innerText);
+              this.removeKeyword(keyword);
+
             })
         });
     }
 
-    controlFindInArray (keyword) {
+    controlFindInIconTagArray (keyword) {
 
         let valid = true;
-        this.listIconTags.forEach ( iconTag => {
+        //let indexOf = -1;
+        let indexOf = 0;
+        this.listIconTags.every ( iconTag => {
             if (iconTag.key == keyword) {
                 valid = false;
-            } 
+                //index = this.listIconTags.indexOf(iconTag.key);
+                return false;
+            }
+            indexOf ++;
+            return true 
         });
-        return valid;           
+        return {valid, indexOf};           
     }
 }
