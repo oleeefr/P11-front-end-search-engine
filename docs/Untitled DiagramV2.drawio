@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-06T07:22:11.451Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="bXzbRQ_4uzYdj_FhXHno" version="19.0.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-06T07:50:07.360Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="rJIPiKxy2gA3oEnGfqB4" version="19.0.0" type="github">
   <diagram id="-a1fJrtmiVYJqWQ7TTML" name="Page-1">
     <mxGraphModel dx="1038" dy="579" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -98,7 +98,7 @@
             <mxPoint x="16" y="-16" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="zr_pxFgucftl4YlPrD-Z-1" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="l3s5LmeQVraJp4XUyv6A-12">
+        <mxCell id="zr_pxFgucftl4YlPrD-Z-1" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="l3s5LmeQVraJp4XUyv6A-12" target="zr_pxFgucftl4YlPrD-Z-9">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="390" y="750" as="sourcePoint" />
             <mxPoint x="520" y="690" as="targetPoint" />
@@ -109,11 +109,53 @@
             <mxPoint x="21" y="-6" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="zr_pxFgucftl4YlPrD-Z-3" value="Mise à jour de la liste des tags matchant avec le caratére" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
-          <mxGeometry x="60" y="670" width="130" height="60" as="geometry" />
+        <mxCell id="zr_pxFgucftl4YlPrD-Z-3" value="Mise à jour &amp;amp; affichage de la liste des tags en fonction du caractère Saisie" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="55" y="645" width="140" height="70" as="geometry" />
         </mxCell>
         <mxCell id="zr_pxFgucftl4YlPrD-Z-5" value="" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="250" y="515" width="90" height="95" as="geometry" />
+          <mxGeometry x="475" y="752.5" width="90" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="zr_pxFgucftl4YlPrD-Z-6" value="Sélection d&#39;un tag par l&#39;utilisateur" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="770" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zr_pxFgucftl4YlPrD-Z-7" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="zr_pxFgucftl4YlPrD-Z-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="290" y="440" as="sourcePoint" />
+            <mxPoint x="570" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zr_pxFgucftl4YlPrD-Z-8" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="zr_pxFgucftl4YlPrD-Z-3" target="zr_pxFgucftl4YlPrD-Z-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="820" as="sourcePoint" />
+            <mxPoint x="570" y="770" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="125" y="800" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zr_pxFgucftl4YlPrD-Z-9" value="Mise à jour de la liste&amp;nbsp;&lt;br&gt;des recettes matchant avec les caractères Saisies" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="455" y="650" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="zr_pxFgucftl4YlPrD-Z-11" value="Mise è jour de la liste&lt;br&gt;des recettes en fonction du ou des tags Sélectionnés&amp;nbsp;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="890" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="zr_pxFgucftl4YlPrD-Z-12" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="zr_pxFgucftl4YlPrD-Z-9" target="zr_pxFgucftl4YlPrD-Z-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="560" y="810" as="sourcePoint" />
+            <mxPoint x="580" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zr_pxFgucftl4YlPrD-Z-13" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="zr_pxFgucftl4YlPrD-Z-6" target="zr_pxFgucftl4YlPrD-Z-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="560" y="810" as="sourcePoint" />
+            <mxPoint x="420" y="800" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zr_pxFgucftl4YlPrD-Z-16" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="zr_pxFgucftl4YlPrD-Z-5" target="zr_pxFgucftl4YlPrD-Z-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="800" as="sourcePoint" />
+            <mxPoint x="490" y="750" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
