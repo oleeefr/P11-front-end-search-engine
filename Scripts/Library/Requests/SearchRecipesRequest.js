@@ -6,8 +6,7 @@ export class SearchRecipesRequest  {
         #listeRecette;
         #recetteResult= [];
         #criteres = ["name","description","ingredients"];
-        //#criteres = ["name","description"];
-
+        
         constructor (character,listRecette) {
             this.#character = Utils.getFormatToLowerCaseAndLmString(character);
             this.#listeRecette = listRecette;
@@ -21,6 +20,7 @@ export class SearchRecipesRequest  {
                if (this.searchRecipesByCriteria(recette)) 
                     this.listeRecetteFilter.push(recette) ;
             });
+            // TODO insérer ici ? le fitre des tags
             return this.listeRecetteFilter;
         }
 

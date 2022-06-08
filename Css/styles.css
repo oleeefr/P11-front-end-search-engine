@@ -10066,12 +10066,6 @@ header img {
 #tag-ingredients .btn-group .dropdown-parent-active .menu-tag .tag-btn-skin {
   border: none;
   background-color: #007bff;
-  /*
-  &:visited
-  &:active {
-      background-color: $couleurDeFond; // param_2
-      border: none;
-  }*/
 }
 #tag-ingredients .btn-group .dropdown-parent-active .menu-tag .tag-btn-skin .switch-down {
   display: none;
@@ -10089,6 +10083,7 @@ header img {
   color: #FFFF;
   padding-left: 30px;
   padding-top: 15px;
+  width: 65%;
 }
 #tag-ingredients .btn-group .dropdown-parent-active .container-list-tags .format-text-list .format-font-li {
   font-size: 23px;
@@ -10198,12 +10193,6 @@ header img {
 #tag-appareils .btn-group .dropdown-parent-active .menu-tag .tag-btn-skin {
   border: none;
   background-color: #218838;
-  /*
-  &:visited
-  &:active {
-      background-color: $couleurDeFond; // param_2
-      border: none;
-  }*/
 }
 #tag-appareils .btn-group .dropdown-parent-active .menu-tag .tag-btn-skin .switch-down {
   display: none;
@@ -10221,6 +10210,7 @@ header img {
   color: #FFFF;
   padding-left: 30px;
   padding-top: 15px;
+  width: 65%;
 }
 #tag-appareils .btn-group .dropdown-parent-active .container-list-tags .format-text-list .format-font-li {
   font-size: 23px;
@@ -10330,12 +10320,6 @@ header img {
 #tag-ustensibles .btn-group .dropdown-parent-active .menu-tag .tag-btn-skin {
   border: none;
   background-color: #c82333;
-  /*
-  &:visited
-  &:active {
-      background-color: $couleurDeFond; // param_2
-      border: none;
-  }*/
 }
 #tag-ustensibles .btn-group .dropdown-parent-active .menu-tag .tag-btn-skin .switch-down {
   display: none;
@@ -10353,6 +10337,7 @@ header img {
   color: #FFFF;
   padding-left: 30px;
   padding-top: 15px;
+  width: 65%;
 }
 #tag-ustensibles .btn-group .dropdown-parent-active .container-list-tags .format-text-list .format-font-li {
   font-size: 23px;

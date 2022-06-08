@@ -4,7 +4,7 @@ import { Utils } from '../../../Utils/utils.js';
 export class Button_iconTag {
 
     constructor (keyword, categoryTag) {
-        this.keyword = Utils.getFormatToLowerCaseAndLmString(keyword);
+        this.keyword =(keyword.trim());
         this. backgroundColor = new Map();
         this.backgroundColor.set ('ingredients',"btn-primary");
         this.backgroundColor.set('appareils',"btn-success");

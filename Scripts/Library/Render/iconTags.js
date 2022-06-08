@@ -44,7 +44,7 @@ export class iconTags {
         selectAllButtonIconTags.forEach(menuIcon =>{
             menuIcon.addEventListener('click', (event) => {
               console.log("fonction de suppression..");
-              let keyword = Utils.getFormatToLowerCaseAndLmString(event.target.innerText);
+              let keyword = event.target.innerText.trim();
               this.removeKeyword(keyword);
 
             })
@@ -54,12 +54,10 @@ export class iconTags {
     controlFindInIconTagArray (keyword) {
 
         let valid = true;
-        //let indexOf = -1;
         let indexOf = 0;
         this.listIconTags.every ( iconTag => {
             if (iconTag.key == keyword) {
                 valid = false;
-                //index = this.listIconTags.indexOf(iconTag.key);
                 return false;
             }
             indexOf ++;

@@ -24,7 +24,7 @@ export class Utils {
     static findInArray (character,array) {
         let valid = false;
         array.every ( (element) => {
-            if (element.search(character)) {
+            if (element == character) {
                 valid = true;
                 return false;
             }
@@ -36,7 +36,7 @@ export class Utils {
     // fonction static renvoyant True si elle trouve dans une chaine de caratcère
     // le premier enregistrement corespondant au caractère en entrée
     static findInString (character, string) {
-        if (string.search(character)>0)  {
+        if (string.search(character)>=0)  {
             return true;
         }
         return false;
@@ -44,7 +44,7 @@ export class Utils {
 
     // fonction static renvoyant le nom de du type de tag
     static filterNameTag (value) {
-            let result = value.toLowerCase().trim().split('-');
+            let result = value.trim().split('-');
        return  result[1];
     }
 

@@ -11,9 +11,8 @@ export async function index () {
     let fieldSearch = document.querySelector('#search-field');
     fieldSearch.addEventListener('input', 
        (event)=> {
-            //event.preventDefault();
             let keyword = event.target.value;
-            console.log("mot recherché :"+keyword);
+            console.log("mot recherché recette:"+keyword);
             if (functions.Utils.triggerKeyWord(keyword)) {
                renderSearchInput.SelectRecettes.by(keyword, render.allRecettes);
             }
@@ -24,7 +23,8 @@ export async function index () {
    
     // Ouverture & Fermeture de la modale de tag
     let tags = document.querySelectorAll('.tags button');
-    console.log(tags);
+    let tagInputs = document.querySelectorAll('.tags input');
+    //console.log(tags);
     tags.forEach((tag) => {
        tag.addEventListener(
           'click', (event)=> {
@@ -34,12 +34,24 @@ export async function index () {
              rendrerSearchTag.SelectTags.modal(event.currentTarget.id);
             }
        );
-    }); 
+    });
+    
+    // Gestion de saisie dans la barre de Recherche des Tags
+    tagInputs.forEach((input) => {
+       input.addEventListener('input', (event)=> {
+         let keyword = event.target.value;
+         let tagNameInput = event.currentTarget.name;
+            console.log("mot recherché tag :"+keyword);
+            rendrerSearchTag.SelectTags.filterListTags(keyword,
+                                                       tagNameInput, 
+                                                       render.allTags);
+       });
+    });
 
     // Gestion de la selection des mots tag de la liste
     let menuIconTagSelected = rendrerSearchTag.SelectTags.getMenuIconTags();
     let keywordsTags = document.querySelectorAll ('.container-list-tags ul');
-    console.log(keywordsTags);
+    //console.log(keywordsTags);
     keywordsTags.forEach( (keywordsTag) => {
       keywordsTag.addEventListener('click', (event) => {
 
@@ -50,6 +62,7 @@ export async function index () {
                                                                                  menuIconTagSelected );
       });
     });
+    render.tagsDisplay();
 
     render.recettesDisplay();
  }

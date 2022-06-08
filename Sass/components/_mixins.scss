@@ -110,13 +110,6 @@
         .tag-btn-skin {
             border: none;
             background-color: $couleurDeFond;
-            
-            /*
-            &:visited
-            &:active {
-                background-color: $couleurDeFond; // param_2
-                border: none;
-            }*/
 
             .switch-down {
                 display: none;
@@ -136,6 +129,7 @@
                 color: #FFFF;
                 padding-left: 30px;
                 padding-top: 15px;
+                width: 65%;
 
                 .format-font-li {
                     font-size: 23px;

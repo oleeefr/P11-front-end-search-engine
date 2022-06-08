@@ -6,7 +6,7 @@ export class SelectRecettes {
     static by (character, listRecette) {
         let recettes = new SearchRecipesRequest (character, listRecette);
         let result = recettes.getResultRecipe ();
-        console.log(result);
+        //console.log(result);
         Recettes.Display(result);
     }
 }
