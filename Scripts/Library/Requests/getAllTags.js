@@ -23,7 +23,8 @@ export class getAllTags {
     #addAppliances () {
         let appliances = [];
         this.#recettes.forEach(recette => {
-            let appliance = Utils.getFormatToLowerCaseAndLmString(recette.appliance);
+            // let appliance = Utils.getFormatToLowerCaseAndLmString(recette.appliance);
+            let appliance = recette.appliance;
             if (appliances.length==0 || !Utils.findInArray(appliance, appliances)) {
                 // console.log('value :'+ appliance+' teb:'+appliances);
                 appliances.push(appliance);

@@ -7,17 +7,18 @@ export async function index () {
     let functions = await import ('../../Utils/utils.js');
     let rendrerSearchTag = await import ('../../Library/Render/SelectTags.js');
    
+    // liste des tags selectionnés pour la Recherche
+    let menuIconTagSelected = rendrerSearchTag.SelectTags.getMenuIconTags();
+    
     // Gestion de saisie dans la barre de Recherche principal
     let fieldSearch = document.querySelector('#search-field');
     fieldSearch.addEventListener('input', 
        (event)=> {
             let keyword = event.target.value;
             console.log("mot recherché recette:"+keyword);
-            if (functions.Utils.triggerKeyWord(keyword)) {
-               renderSearchInput.SelectRecettes.by(keyword, render.allRecettes);
-            }
-            else 
-               render.recettesDisplay();
+            if (!functions.Utils.triggerKeyWord(keyword)) keyword="";
+            renderSearchInput.SelectRecettes.by(keyword, render.allRecettes, menuIconTagSelected);
+            // render.recettesDisplay();
        }
     );
    
@@ -49,7 +50,6 @@ export async function index () {
     });
 
     // Gestion de la selection des mots tag de la liste
-    let menuIconTagSelected = rendrerSearchTag.SelectTags.getMenuIconTags();
     let keywordsTags = document.querySelectorAll ('.container-list-tags ul');
     //console.log(keywordsTags);
     keywordsTags.forEach( (keywordsTag) => {
@@ -57,9 +57,11 @@ export async function index () {
 
          console.log(event.currentTarget.id);
          console.log('bouton mot tag Li pressé..');
+         let mainSearchField = fieldSearch.value;
          menuIconTagSelected = rendrerSearchTag.SelectTags.createKeywordIconTag( event.target.innerHTML, 
                                                                                  event.currentTarget.id,
                                                                                  menuIconTagSelected );
+         renderSearchInput.SelectRecettes.by(mainSearchField, render.allRecettes, menuIconTagSelected);
       });
     });
     render.tagsDisplay();

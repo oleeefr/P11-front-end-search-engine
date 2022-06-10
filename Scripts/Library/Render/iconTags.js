@@ -1,5 +1,7 @@
 import {Button_iconTag} from '../../Library/Render/Html/Button_iconTag.js';
 import { Utils } from '../../Utils/utils.js';
+import { SelectRecettes } from './SelectRecettes.js';
+import { allRecettes } from '../../Main/controller/index.js';
 
 export class iconTags {
    
@@ -41,12 +43,14 @@ export class iconTags {
         });
 
         let selectAllButtonIconTags = document.querySelectorAll('#tags-selectionnes button');
+        let fieldSearch = document.querySelector('#search-field');
         selectAllButtonIconTags.forEach(menuIcon =>{
             menuIcon.addEventListener('click', (event) => {
               console.log("fonction de suppression..");
+              let mainSearchField = fieldSearch.value;
               let keyword = event.target.innerText.trim();
               this.removeKeyword(keyword);
-
+              SelectRecettes.by (mainSearchField, allRecettes, this.listIconTags);
             })
         });
     }

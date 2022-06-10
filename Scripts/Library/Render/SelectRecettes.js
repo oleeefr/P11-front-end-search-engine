@@ -5,14 +5,17 @@ import { Tags } from '../Render/Tags.js';
 
 export class SelectRecettes {
 
-    static by (character, listRecette) {
-        let recettes = new SearchRecipesRequest (character, listRecette);
+    static by (character, listRecette, iconTagsSelected) {
+        let recettes = new SearchRecipesRequest (character, 
+                                                 listRecette,
+                                                 iconTagsSelected);
         let resultRecette = recettes.getResultRecipe ();
         //console.log(result);
-        let resultTags = new getAllTags(resultRecette);
+        let resultFilterTag = recettes.searchRecipesByIconTagsSelected (iconTagsSelected);
+        let resultTags = new getAllTags(resultFilterTag);
         //console.log(resultTags);
         Tags.Display(resultTags);
-        Recettes.Display(resultRecette);
+        Recettes.Display(resultFilterTag);
     }
 }
 
