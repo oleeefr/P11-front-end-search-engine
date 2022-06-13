@@ -16,7 +16,7 @@ export class getAllTags {
         listTags.set('ustensibles',this.#addUstensils());
         listTags.set('ingredients',this.#addIngredients());
 
-        console.log(listTags);
+        // console.log(listTags);
         return listTags;
     } 
 

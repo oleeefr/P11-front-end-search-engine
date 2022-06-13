@@ -102,9 +102,8 @@ export class SearchRecipesRequest  {
 
         searchRecipesByIconTagsSelected (iconTagsSelected) {
             let iconTags = iconTagsSelected; 
-            console.log('dans searchRecipesByIconTagsSelected contenu de menucTags: '+iconTags);
+            //console.log('dans searchRecipesByIconTagsSelected contenu de menucTags: '+iconTags);
             
-
             if (iconTags.length>0) {
                 let recipesFilterTag = [];
                 for(const recipe of this.#recetteResult) {
