@@ -27,8 +27,7 @@ export async function index () {
     let tagInputs = document.querySelectorAll('.tags input');
     //console.log(tags);
     tags.forEach((tag) => {
-       tag.addEventListener(
-          'click', (event)=> {
+       tag.addEventListener('click', (event)=> {
 
              console.log(event.currentTarget.id);
              console.log('bouton tag pressé..');
