@@ -26,6 +26,6 @@ export class Recettes {
     }
 
     static DisplayNoResult () {
-        return "<p>Aucune recette ne correspond à votre critère… vous pouvez chercher « tarte aux pommes », « poisson », etc.</p>";
+        return "<p class='h3'>Aucune recette ne correspond à votre critère… vous pouvez chercher « tarte aux pommes », « poisson », etc.</p>";
     }
 }

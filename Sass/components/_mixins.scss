@@ -84,6 +84,7 @@
     border-radius: 7px;
     z-index: 5;
     width: 100%;
+    min-width: 760px;
     margin-right: 1rem;
 
     .menu-tag {
@@ -129,12 +130,14 @@
                 color: #FFFF;
                 padding-left: 30px;
                 padding-top: 15px;
-                width: 65%;
+                //width: 120%;
 
                 .format-font-li {
-                    font-size: 23px;
+                    // font-size: 23px;
+                    font-size: 19px;
                     font-weight: lighter;
-                    flex-basis: 31%;
+                    flex-basis: 32%;
+                    //flex-basis: 40%;
                     cursor: pointer;
 
                     &:hover {

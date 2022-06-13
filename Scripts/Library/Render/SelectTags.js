@@ -17,21 +17,32 @@ export class SelectTags {
         let idTags = "#tag-"+idTag+" .openClose";
         let nameTag = document.querySelector(idTags);
         let nameInput = "input[name="+idTag+"]";
+        let blockTag = document.querySelector("#tag-"+idTag);
         let inputTagInit =document.querySelector(nameInput);
             inputTagInit.value="";
         let nameTagClasses = nameTag.classList;
-        let etatTag = nameTagClasses.toggle("dropdown-parent");
-        let etatTagActive = nameTagClasses.toggle("dropdown-parent-active");
+        let blockTagClasses = blockTag.classList;
+        nameTagClasses.toggle("dropdown-parent");
+        nameTagClasses.toggle("dropdown-parent-active");
+        blockTagClasses.toggle("col");
+        blockTagClasses.toggle("col-7"); ;
+      
+        //console.log(etatTagActive);
+        //let etatBlockTag = blockTag.toggle("col");
+        // let etatblockTagActive = blockTag.toggle("col-7");
         this.closeOtherTags(idTag);
-    }
 
+    }
 
     static closeOtherTags (selectTag) {
 
         let allTags = document.querySelectorAll(".openClose");
         allTags.forEach( (tag) => {
             let parentElementTagIdName = Utils.filterNameTag(tag.parentElement.parentElement.id);
-            if (selectTag != parentElementTagIdName) tag.className="openClose dropdown-parent";
+            if (selectTag != parentElementTagIdName) {
+                tag.className="openClose dropdown-parent";
+                tag.parentElement.parentElement.className="col";
+            }
         });
 
     }

@@ -2,6 +2,7 @@ import {Button_iconTag} from '../../Library/Render/Html/Button_iconTag.js';
 import { Utils } from '../../Utils/utils.js';
 import { SelectRecettes } from './SelectRecettes.js';
 import { allRecettes } from '../../Main/controller/index.js';
+import { SelectTags } from './SelectTags.js';
 
 export class iconTags {
    
@@ -53,6 +54,7 @@ export class iconTags {
               SelectRecettes.by (mainSearchField, allRecettes, this.listIconTags);
             })
         });
+        if (this.listIconTags.length==0) SelectTags.closeOtherTags("");
     }
 
     controlFindInIconTagArray (keyword) {
