@@ -31,7 +31,6 @@ export class SelectTags {
         //let etatBlockTag = blockTag.toggle("col");
         // let etatblockTagActive = blockTag.toggle("col-7");
         this.closeOtherTags(idTag);
-
     }
 
     static closeOtherTags (selectTag) {
