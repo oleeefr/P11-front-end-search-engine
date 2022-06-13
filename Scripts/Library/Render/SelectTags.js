@@ -5,12 +5,12 @@ import { Tags } from './Tags.js';
 export class SelectTags {
 
 
-    static modal (nameTag) {
-        this.open(nameTag);
+    static modal (nameTag,tagsSelected) {
+        this.open(nameTag, tagsSelected);
     } 
     
     
-    static open(tag) {
+    static open(tag, tagsSelected) {
 
         console.log("dans la methode selectTags..");
         let idTag = Utils.filterNameTag(tag);
@@ -25,13 +25,16 @@ export class SelectTags {
         nameTagClasses.toggle("dropdown-parent");
         nameTagClasses.toggle("dropdown-parent-active");
         blockTagClasses.toggle("col");
-        blockTagClasses.toggle("col-7"); ;
-      
-        //console.log(etatTagActive);
-        //let etatBlockTag = blockTag.toggle("col");
-        // let etatblockTagActive = blockTag.toggle("col-7");
-        this.closeOtherTags(idTag);
+        blockTagClasses.toggle("col-7");
 
+        if (!tagsSelected) this.renderInitTag();
+        this.closeOtherTags(idTag);
+    }
+
+    static renderInitTag () {
+        let blankTag = document.querySelector("div .blank");
+        let blankTagClasses = blankTag.classList;
+        blankTagClasses.toggle("col");
     }
 
     static closeOtherTags (selectTag) {

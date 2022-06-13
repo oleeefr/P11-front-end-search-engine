@@ -28,10 +28,10 @@ export async function index () {
     //console.log(tags);
     tags.forEach((tag) => {
        tag.addEventListener('click', (event)=> {
-
+             let tagsSelected = (menuIconTagSelected.length==0 || menuIconTagSelected.length==undefined)? false: true;
              console.log(event.currentTarget.id);
              console.log('bouton tag pressé..');
-             rendrerSearchTag.SelectTags.modal(event.currentTarget.id);
+             rendrerSearchTag.SelectTags.modal(event.currentTarget.id, tagsSelected);
             }
        );
     });

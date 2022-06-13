@@ -54,7 +54,10 @@ export class iconTags {
               SelectRecettes.by (mainSearchField, allRecettes, this.listIconTags);
             })
         });
-        if (this.listIconTags.length==0) SelectTags.closeOtherTags("");
+        if (this.listIconTags.length==0) {
+            SelectTags.closeOtherTags("");
+            SelectTags.renderInitTag();
+        };
     }
 
     controlFindInIconTagArray (keyword) {
