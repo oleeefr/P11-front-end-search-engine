@@ -10081,12 +10081,11 @@ header img {
   color: #FFFF;
   padding-left: 30px;
   padding-top: 15px;
-  width: 65%;
 }
 #tag-ingredients .btn-group .dropdown-parent-active .container-list-tags .format-text-list .format-font-li {
-  font-size: 23px;
+  font-size: 19px;
   font-weight: lighter;
-  flex-basis: 31%;
+  flex-basis: 32%;
   cursor: pointer;
 }
 #tag-ingredients .btn-group .dropdown-parent-active .container-list-tags .format-text-list .format-font-li:hover {
@@ -10206,12 +10205,11 @@ header img {
   color: #FFFF;
   padding-left: 30px;
   padding-top: 15px;
-  width: 65%;
 }
 #tag-appareils .btn-group .dropdown-parent-active .container-list-tags .format-text-list .format-font-li {
-  font-size: 23px;
+  font-size: 19px;
   font-weight: lighter;
-  flex-basis: 31%;
+  flex-basis: 32%;
   cursor: pointer;
 }
 #tag-appareils .btn-group .dropdown-parent-active .container-list-tags .format-text-list .format-font-li:hover {
@@ -10331,12 +10329,11 @@ header img {
   color: #FFFF;
   padding-left: 30px;
   padding-top: 15px;
-  width: 65%;
 }
 #tag-ustensibles .btn-group .dropdown-parent-active .container-list-tags .format-text-list .format-font-li {
-  font-size: 23px;
+  font-size: 19px;
   font-weight: lighter;
-  flex-basis: 31%;
+  flex-basis: 32%;
   cursor: pointer;
 }
 #tag-ustensibles .btn-group .dropdown-parent-active .container-list-tags .format-text-list .format-font-li:hover {

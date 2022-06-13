@@ -31,7 +31,7 @@ export class getAllTags {
             }
            // console.log('tebAppliances :'+appliances); 
         });
-        return appliances;
+        return appliances.sort();
     }
 
     #addUstensils () {
@@ -45,7 +45,7 @@ export class getAllTags {
             });
             //console.log('tebUtensibles :'+results);            
         });
-        return results;
+        return results.sort();
     }
 
     #addIngredients () {
@@ -59,6 +59,6 @@ export class getAllTags {
             });
             //console.log('tebIngredients :'+results); 
         });
-        return results;
+        return results.sort();
     }
 }
