@@ -24,7 +24,7 @@ export class Utils {
     static findInArray (character,array) {
         let valid = false;
         array.every ( (element) => {
-            if (element == character) {
+            if (this.getFormatToLowerCaseAndLmString(element) == this.getFormatToLowerCaseAndLmString(character)) {
                 valid = true;
                 return false;
             }

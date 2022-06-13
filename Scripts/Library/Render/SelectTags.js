@@ -60,7 +60,9 @@ export class SelectTags {
         let listOfTagsClone = new Map(listOfTags);
         let listOfTag = listOfTagsClone.get(tagCategory);
         for (const tag of listOfTag) {
-            let valid = Utils.findInString (character,tag);
+            let fCharacter = Utils.getFormatToLowerCaseAndLmString(character);
+            let fTag = Utils.getFormatToLowerCaseAndLmString(tag);
+            let valid = Utils.findInString (fCharacter,fTag);
             if (valid) this.listeTagsFilter.push(tag);
         }
         listOfTagsClone.set(tagCategory, this.listeTagsFilter);
