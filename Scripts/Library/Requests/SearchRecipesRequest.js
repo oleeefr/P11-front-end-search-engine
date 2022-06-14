@@ -17,10 +17,11 @@ export class SearchRecipesRequest  {
         searchRecipesByCharact () {
 
             let listeRecetteFilter = [];
-            this.#listeRecette.forEach((recette) => {
-               if (this.searchRecipesByCriteria(recette)) 
-                    listeRecetteFilter.push(recette) ;
-            });
+            for (const recette of this.#listeRecette) {
+                if (this.searchRecipesByCriteria(recette)) 
+                listeRecetteFilter.push(recette) ;
+            }
+
             return listeRecetteFilter;
         }
 

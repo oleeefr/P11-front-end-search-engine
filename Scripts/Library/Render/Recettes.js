@@ -8,15 +8,15 @@ export class Recettes {
         let articles="";
         let articleRecette;
 
-        listDesRecettes.forEach(recette => {
+        for (const recette of listDesRecettes) {
             articleRecette = new Article_Recette(recette.name, 
                                                  recette.description, 
                                                  recette.time,
                                                  recette.ingredients
                                                  ).render();
             //console.log(articleRecette);
-            articles+= articleRecette;   
-        });
+            articles+= articleRecette;
+        }
 
         if (listDesRecettes.length==0)
             articles= this.DisplayNoResult();

@@ -35,12 +35,13 @@ export class Article_Recette {
     getIngredientsDom (ingredients) {
 
         let renderIngredients ="";
-        ingredients.forEach(ingredient => {
-            let unit = (ingredient.hasOwnProperty('unit'))? ingredient.unit:"";
-            let quantity = (ingredient.hasOwnProperty('quantity'))? ingredient.quantity+":":"";
-            let div =`<p class="mb-0"><span class="font-weight-bold ingredient">${ingredient.ingredient}</span> ${quantity} ${unit}</p>\n`;
-            renderIngredients+=div;
-        });
+        for (const ingredient of ingredients) {
+          let unit = (ingredient.hasOwnProperty('unit'))? ingredient.unit:"";
+          let quantity = (ingredient.hasOwnProperty('quantity'))? ingredient.quantity+":":"";
+          let div =`<p class="mb-0"><span class="font-weight-bold ingredient">${ingredient.ingredient}</span> ${quantity} ${unit}</p>\n`;
+          renderIngredients+=div;
+        }
+
         return renderIngredients;
     }
 

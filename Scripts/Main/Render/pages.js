@@ -26,19 +26,20 @@ export async function index () {
     let tags = document.querySelectorAll('.tags button');
     let tagInputs = document.querySelectorAll('.tags input');
     //console.log(tags);
-    tags.forEach((tag) => {
-       tag.addEventListener('click', (event)=> {
-             let tagsSelected = (menuIconTagSelected.length==0 || menuIconTagSelected.length==undefined)? false: true;
-             console.log(event.currentTarget.id);
-             console.log('bouton tag pressé..');
-             rendrerSearchTag.SelectTags.modal(event.currentTarget.id, tagsSelected);
-            }
-       );
-    });
+   //  for (const contentLi of listTags) {
+    for (const tag of tags) {
+      tag.addEventListener('click', (event)=> {
+         let tagsSelected = (menuIconTagSelected.length==0 || menuIconTagSelected.length==undefined)? false: true;
+         console.log(event.currentTarget.id);
+         console.log('bouton tag pressé..');
+         rendrerSearchTag.SelectTags.modal(event.currentTarget.id, tagsSelected);
+        }
+      );
+    }
     
-    // Gestion de saisie dans la barre de Recherche des Tags
-    tagInputs.forEach((input) => {
-       input.addEventListener('input', (event)=> {
+    // Saisie dans la barre de Recherche des Tags
+    for(const input of tagInputs) {
+      input.addEventListener('input', (event)=> {
          let keyword = event.target.value;
          let tagNameInput = event.currentTarget.name;
             console.log("mot recherché tag :"+keyword);
@@ -46,12 +47,12 @@ export async function index () {
                                                        tagNameInput, 
                                                        render.allTags);
        });
-    });
+    }
 
-    // Gestion de la selection des mots tag de la liste
+    // Selection des mots clés tag dans liste des tags
     let keywordsTags = document.querySelectorAll ('.container-list-tags ul');
     //console.log(keywordsTags);
-    keywordsTags.forEach( (keywordsTag) => {
+    for (const keywordsTag of keywordsTags) {
       keywordsTag.addEventListener('click', (event) => {
 
          console.log(event.currentTarget.id);
@@ -62,7 +63,8 @@ export async function index () {
                                                                                  menuIconTagSelected );
          renderSearchInput.SelectRecettes.by(mainSearchField, render.allRecettes, menuIconTagSelected);
       });
-    });
+    }
+
     render.tagsDisplay();
 
     render.recettesDisplay();

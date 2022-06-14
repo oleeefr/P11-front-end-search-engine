@@ -40,14 +40,13 @@ export class SelectTags {
     static closeOtherTags (selectTag) {
 
         let allTags = document.querySelectorAll(".openClose");
-        allTags.forEach( (tag) => {
+        for (const tag of allTags) {
             let parentElementTagIdName = Utils.filterNameTag(tag.parentElement.parentElement.id);
             if (selectTag != parentElementTagIdName) {
                 tag.className="openClose dropdown-parent";
                 tag.parentElement.parentElement.className="col";
             }
-        });
-
+        }
     }
 
     static createKeywordIconTag (keyword, tagCategory, menuListIconTags) {

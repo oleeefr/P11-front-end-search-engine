@@ -38,22 +38,26 @@ export class iconTags {
 
         let dysplayMenuIconTags = document.querySelector('#tags-selectionnes');
         dysplayMenuIconTags.innerHTML="";
-        this.listIconTags.forEach(buttonIconTag => {
+
+        // Affichage des boutons tags crées
+        for (const buttonIconTag of this.listIconTags ) {
             let buttonHtmlTag = new Button_iconTag(buttonIconTag.key, buttonIconTag.type).render();
             dysplayMenuIconTags.innerHTML += buttonHtmlTag;
-        });
+        }
 
+        // Affectation de l'évènement de suppression sur les boutons tags
         let selectAllButtonIconTags = document.querySelectorAll('#tags-selectionnes button');
         let fieldSearch = document.querySelector('#search-field');
-        selectAllButtonIconTags.forEach(menuIcon =>{
+        for (const menuIcon of selectAllButtonIconTags) {
             menuIcon.addEventListener('click', (event) => {
-              console.log("fonction de suppression..");
-              let mainSearchField = fieldSearch.value;
-              let keyword = event.target.innerText.trim();
-              this.removeKeyword(keyword);
-              SelectRecettes.by (mainSearchField, allRecettes, this.listIconTags);
-            })
-        });
+                // console.log("fonction de suppression..");
+                let mainSearchField = fieldSearch.value;
+                let keyword = event.target.innerText.trim();
+                this.removeKeyword(keyword);
+                SelectRecettes.by (mainSearchField, allRecettes, this.listIconTags);
+              })
+        }
+
         if (this.listIconTags.length==0) {
             SelectTags.closeOtherTags("");
             SelectTags.renderInitTag();

@@ -22,43 +22,45 @@ export class getAllTags {
 
     #addAppliances () {
         let appliances = [];
-        this.#recettes.forEach(recette => {
+        for (const recette of this.#recettes) {
             // let appliance = Utils.getFormatToLowerCaseAndLmString(recette.appliance);
             let appliance = recette.appliance;
             if (appliances.length==0 || !Utils.findInArray(appliance, appliances)) {
                 // console.log('value :'+ appliance+' teb:'+appliances);
                 appliances.push(appliance);
-            }
-           // console.log('tebAppliances :'+appliances); 
-        });
+            } 
+        }
+        //console.log('tebAppliances :'+appliances);
         return appliances.sort();
     }
 
     #addUstensils () {
         let results = [];
-        this.#recettes.forEach(recette => {
+        for(const recette of this.#recettes) {
             let ustensibles = recette.ustensils;
-            ustensibles.forEach( ustensible => {
+            for (const ustensible of ustensibles) {
                 if (results.length==0 || !Utils.findInArray(ustensible, results)) {
                     results.push(ustensible);
                 }
-            });
-            //console.log('tebUtensibles :'+results);            
-        });
+            }
+            // console.log('tabUtensiles :'+results);  
+        }
+
         return results.sort();
     }
 
     #addIngredients () {
         let results = [];
-        this.#recettes.forEach (recette => {
+        for (const recette of this.#recettes) {
             let ingredients = recette.ingredients;
-            ingredients.forEach( element => {
+            for (const element of ingredients) {
                 if (results.length== 0 || !Utils.findInArray(element.ingredient, results)) {
                     results.push(element.ingredient);
                 }
-            });
-            //console.log('tebIngredients :'+results); 
-        });
+            }
+            // console.log('tab-Ingredients :'+results); 
+        }
+
         return results.sort();
     }
 }
