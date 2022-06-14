@@ -18,7 +18,6 @@ export async function index () {
             console.log("mot recherché recette:"+keyword);
             if (!functions.Utils.triggerKeyWord(keyword)) keyword="";
             renderSearchInput.SelectRecettes.by(keyword, render.allRecettes, menuIconTagSelected);
-            // render.recettesDisplay();
        }
     );
    
@@ -26,12 +25,11 @@ export async function index () {
     let tags = document.querySelectorAll('.tags button');
     let tagInputs = document.querySelectorAll('.tags input');
     //console.log(tags);
-   //  for (const contentLi of listTags) {
     for (const tag of tags) {
       tag.addEventListener('click', (event)=> {
          let tagsSelected = (menuIconTagSelected.length==0 || menuIconTagSelected.length==undefined)? false: true;
-         console.log(event.currentTarget.id);
-         console.log('bouton tag pressé..');
+         // console.log(event.currentTarget.id);
+         // console.log('bouton tag pressé..');
          rendrerSearchTag.SelectTags.modal(event.currentTarget.id, tagsSelected);
         }
       );
@@ -55,8 +53,8 @@ export async function index () {
     for (const keywordsTag of keywordsTags) {
       keywordsTag.addEventListener('click', (event) => {
 
-         console.log(event.currentTarget.id);
-         console.log('bouton mot tag Li pressé..');
+         console.log("recherche dans tag : "+event.currentTarget.id);
+         // console.log('bouton mot tag Li pressé..');
          let mainSearchField = fieldSearch.value;
          menuIconTagSelected = rendrerSearchTag.SelectTags.createKeywordIconTag( event.target.innerHTML, 
                                                                                  event.currentTarget.id,
