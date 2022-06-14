@@ -6,6 +6,7 @@ import { Tags } from '../Render/Tags.js';
 export class SelectRecettes {
 
     static by (character, listRecette, iconTagsSelected) {
+        console.log("Recherche solution 1 ----");
         console.time("Temps de Rercherche des recettes");
         let recettes = new SearchRecipesRequest (character, 
                                                  listRecette,

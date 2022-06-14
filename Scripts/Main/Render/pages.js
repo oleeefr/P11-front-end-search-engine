@@ -29,8 +29,8 @@ export async function index () {
     tags.forEach((tag) => {
        tag.addEventListener('click', (event)=> {
              let tagsSelected = (menuIconTagSelected.length==0 || menuIconTagSelected.length==undefined)? false: true;
-             console.log(event.currentTarget.id);
-             console.log('bouton tag pressé..');
+             //console.log(event.currentTarget.id);
+             console.log("bouton "+event.currentTarget.id+" selectionné..");
              rendrerSearchTag.SelectTags.modal(event.currentTarget.id, tagsSelected);
             }
        );
@@ -54,8 +54,8 @@ export async function index () {
     keywordsTags.forEach( (keywordsTag) => {
       keywordsTag.addEventListener('click', (event) => {
 
-         console.log(event.currentTarget.id);
-         console.log('bouton mot tag Li pressé..');
+         // console.log(event.currentTarget.id);
+         // console.log('bouton mot tag Li pressé..');
          let mainSearchField = fieldSearch.value;
          menuIconTagSelected = rendrerSearchTag.SelectTags.createKeywordIconTag( event.target.innerHTML, 
                                                                                  event.currentTarget.id,

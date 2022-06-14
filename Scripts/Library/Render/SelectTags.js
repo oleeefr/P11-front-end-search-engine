@@ -12,7 +12,7 @@ export class SelectTags {
     
     static open(tag, tagsSelected) {
 
-        console.log("dans la methode selectTags..");
+        // console.log("dans la methode selectTags..");
         let idTag = Utils.filterNameTag(tag);
         let idTags = "#tag-"+idTag+" .openClose";
         let nameTag = document.querySelector(idTags);
