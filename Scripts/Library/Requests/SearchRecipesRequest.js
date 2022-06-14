@@ -11,47 +11,23 @@ export class SearchRecipesRequest  {
             this.#character = Utils.getFormatToLowerCaseAndLmString(character);
             this.#listeRecette = listRecette;
             this.#recetteResult = this.searchRecipesByCharact ();
-           // this.searchRecipesByIconTagsSelected(iconTagsSelected);
         }
 
         searchRecipesByCharact () {
 
-            let listeRecetteFilter = [];
-            this.#listeRecette.forEach((recette) => {
-               if (this.searchRecipesByCriteria(recette)) 
-                    listeRecetteFilter.push(recette) ;
+           let listeRecetteFilter = this.#listeRecette.filter( recette => { 
+
+                let nomRecette = Utils.getFormatToLowerCase(recette.name);
+                let descriptionRecette = Utils.getFormatToLowerCase(recette.description);
+                let ingredientsRecette = recette.ingredients;
+
+                return ( Utils.findInString (this.#character,nomRecette) ||
+                         Utils.findInString (this.#character,descriptionRecette) ||
+                         this.searchRecipesInIngredients (ingredientsRecette,this.#character)
+                    );  
             });
-            // TODO insérer ici ? le fitre des tags
+
             return listeRecetteFilter;
-        }
-
-        searchRecipesByCriteria (recetteObj) {
-            let valid = false;
-            let recette;
-            let ingredients;
-
-            this.#criteres.every((critere) => {
-                switch (critere) {
-                
-                    case'name':
-                        recette = Utils.getFormatToLowerCase(recetteObj.name);
-                        valid = Utils.findInString (this.#character,recette);
-                        if (valid) return false;
-                        break;
-                    case'description':
-                        recette = Utils.getFormatToLowerCase(recetteObj.description);
-                        valid = Utils.findInString (this.#character,recette);
-                        if (valid) return false;
-                        break;
-                    case'ingredients':
-                        ingredients = recetteObj.ingredients;
-                        valid = this.searchRecipesInIngredients (ingredients,this.#character);
-                        if (valid) return false;
-                        break;
-                }
-                return true;
-            });
-            return valid;
         }
 
         searchRecipesByMenuIconTags (iconTags, recipe) {
@@ -102,22 +78,17 @@ export class SearchRecipesRequest  {
 
         searchRecipesByIconTagsSelected (iconTagsSelected) {
             let iconTags = iconTagsSelected; 
-            //console.log('dans searchRecipesByIconTagsSelected contenu de menucTags: '+iconTags);
-            
             if (iconTags.length>0) {
-                let recipesFilterTag = [];
-                this.#recetteResult.forEach((recipe) =>{
-                    if (this.searchRecipesByMenuIconTags(iconTagsSelected, recipe))
-                        recipesFilterTag.push(recipe);
+
+                let recipesFilterTag = this.#recetteResult.filter(recipe => {
+
+                    return this.searchRecipesByMenuIconTags (iconTagsSelected, recipe);
                 });
 
                 return recipesFilterTag;
             } else {
+
                 return this.#recetteResult;
             }
-        }
-
-        getResultRecipe () {
-            return this.#recetteResult;
         }
 }
