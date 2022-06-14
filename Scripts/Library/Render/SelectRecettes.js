@@ -6,6 +6,10 @@ import { Tags } from '../Render/Tags.js';
 export class SelectRecettes {
 
     static by (character, listRecette, iconTagsSelected) {
+        ////
+        // Process de la recherche des recettes en fonction de
+        // la saisie de l'utilsateur
+        ///
         console.log("Recherche solution 1 ----");
         console.time("Temps de Rercherche des recettes");
         let recettes = new SearchRecipesRequest (character, 
@@ -20,7 +24,7 @@ export class SelectRecettes {
         //console.log(resultTags);
         Tags.Display(resultTags);
         Recettes.Display(resultFilterTag);
-        console.log("---- Temps total :-----");
+        console.log("nombre des recettes Selectionnées :"+ resultFilterTag.length+" //-- Temps total :-----");
         console.timeEnd("Temps de Rercherche des recettes");
         console.log("-------------------------------------");
     }
