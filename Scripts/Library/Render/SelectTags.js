@@ -67,18 +67,21 @@ export class SelectTags {
         return iconTags;
     }
 
+    // méthode permattant de filtrer les mots tags de la liste en fonction de la
+    // saisie dans le champs tag
     static filterListTags (character, tagCategory, listOfTags) {
         
         console.log('dans la méthode filterListTag :'+character);
         this.listeTagsFilter = [];
         let listOfTagsClone = new Map(listOfTags);
         let listOfTag = listOfTagsClone.get(tagCategory);
-        for (const tag of listOfTag) {
+
+        listOfTag.forEach(tag =>{
             let fCharacter = Utils.getFormatToLowerCaseAndLmString(character);
             let fTag = Utils.getFormatToLowerCaseAndLmString(tag);
             let valid = Utils.findInString (fCharacter,fTag);
             if (valid) this.listeTagsFilter.push(tag);
-        }
+        });
         listOfTagsClone.set(tagCategory, this.listeTagsFilter);
         console.log(listOfTagsClone);
         Tags.Display(listOfTagsClone);

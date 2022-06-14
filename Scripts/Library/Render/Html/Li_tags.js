@@ -7,9 +7,9 @@ export class Li_tags {
     constructor (listTags) {
         
         let li_Html = "";
-        for (const contentLi of listTags) {
+        listTags.forEach((contentLi) => {
             li_Html += this.#li(contentLi);
-        }
+        });
        this.#render = li_Html;
     }
 

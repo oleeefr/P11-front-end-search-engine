@@ -106,11 +106,11 @@ export class SearchRecipesRequest  {
             
             if (iconTags.length>0) {
                 let recipesFilterTag = [];
-                for(const recipe of this.#recetteResult) {
+                this.#recetteResult.forEach((recipe) =>{
                     if (this.searchRecipesByMenuIconTags(iconTagsSelected, recipe))
                         recipesFilterTag.push(recipe);
-                }
-                    //this.#recetteResult = recipesFilterTag;
+                });
+
                 return recipesFilterTag;
             } else {
                 return this.#recetteResult;
