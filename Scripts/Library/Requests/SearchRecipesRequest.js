@@ -21,7 +21,6 @@ export class SearchRecipesRequest  {
                if (this.searchRecipesByCriteria(recette)) 
                     listeRecetteFilter.push(recette) ;
             });
-            // TODO insérer ici ? le fitre des tags
             return listeRecetteFilter;
         }
 
